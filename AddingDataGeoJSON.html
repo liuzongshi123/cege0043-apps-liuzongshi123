@@ -48,7 +48,6 @@
 			   fillColor:'#f03',
 			   fillOpacity:0.5
 	}).addTo(mymap).bindPopup("I am a circle.");
-	} // end code to add the basic markers
 
 	// create a geoJSON feature -
 	var geojsonFeature = {
@@ -59,11 +58,16 @@
 		},
 		"geometry":{
 			"type":"Point",
-			"corrdinates":[-0.118092, 51.509865]
+			"coordinates":[-0.136470, 51.523079]
 		}
 	};
 	// and add it to the map
-	L.geoJSON(geojsonFeature).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name+""++geojsonFeature.properties.popupContent+"<b>");
+	L.geoJSON(geojsonFeature).addTo(mymap).bindPopup("<b>"+geojsonFeature.properties.name+
+" "+geojsonFeature.properties.popupContent+"<b>");
+
+	} // end code to add the basic markers
+
+	
 
 window.onload = loadLeafletMap;
 </script>
