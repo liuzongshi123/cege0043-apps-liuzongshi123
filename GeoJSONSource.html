@@ -17,10 +17,10 @@
 
 <script src="js/leaflet.awesome-markers.js"></script>
 
-<script src=https://code.jquery.com/jquery-3.4.1.min.js"
+<script 
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
 	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 	crossorigin="anonymous"></script>
-
 
   <!-- the following CSS is used to set the size of the Map -->
   <style type="text/css"> 
@@ -37,24 +37,12 @@
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 <script>
+
+	
 	var mymap; // global variable to store the map
 
 	// create a custom popup as a global variable
 	var popup = L.popup();
-
-	var earthquakeLayer;
-
-	function getEarthquakeData(){
-		var layURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
-		$.ajax({url:layURL, crossDomain: ture,success:function(result){
-			console.log(result);// check that the data is correct
-			// add the JSON layer onto the map - it will appear using the default icons
-			earthquakelayer = L.geojson(result).addTo(mymap);
-			// change the map zoom so that all the data is shown
-			mymap.fitBounds(earthquakelayer.getBounds());
-		} // end of the inner function
-	});// end of the ajax request
-}// end of the getEarthquakeData function
 
 	// create an event detector to wait for the user's click event and then use the popup to show them where they clicked
     // note that you don't need to do any complicated maths to convert screen coordinates to real world coordiantes - the Leaflet API does this for you
@@ -65,6 +53,20 @@
     			.setContent("You clicked the map at "+e.latlng.toString())
     			.openOn(mymap);
     }
+
+    var earthquakeLayer;
+
+    function getEarthquakeData(){
+    	var layerURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
+    	$.ajax({url: layerURL, crossDomain: true,success: function(result){
+    		console.log(result); // check that the data is correct
+    		// add the JSON layer onto the map - it will appear using the default icons
+			earthquakeLayer = L.geoJson(result).addTo(mymap);
+			// change the map zoom so that all the data is shown
+ 			mymap.fitBounds(earthquakeLayer.getBounds());
+ 			} // end of the inner function
+		}); // end of the ajax request
+	} // end of the getEarthquakeData function
 
 
 	function loadLeafletMap(){
@@ -83,6 +85,7 @@
 	mymap.on('click', onMapClick);
 
 	// now call the code to add the markers
+	
 	addBasicMarkers();
 
 	} //end code to add the leaflet map
@@ -124,7 +127,8 @@
 
 	} // end code to add the basic markers
 
-	
+
+
 
 document.addEventListener('DOMContentLoaded', function(){
 	loadMap();
