@@ -2,7 +2,7 @@ var earthquakeLayer;
 
 function getEarthquakeData(){
     var layerURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson";
-    	var testMarkerRed = L.AwesomeMarkers.icon({
+    var testMarkerRed = L.AwesomeMarkers.icon({
     		icon: 'play',
     		markerColor: 'red'
     	});

@@ -11,3 +11,11 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 	id: 'mapbox.streets'
 }).addTo(mymap);
+
+// now add the click event detector to the map
+mymap.on('click', onMapClick);
+
+// now call the code to add the markers
+addBasicMarkers();
+
+} //end code to add the leaflet map
