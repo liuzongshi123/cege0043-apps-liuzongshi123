@@ -18,6 +18,7 @@
 <script src="js/leaflet.awesome-markers.js"></script>
 <script src="js/basicMap.js"></script>
 <script src="js/earthquakes.js"></script>
+<script src="js/POIdata.js"></script>
 
 <script 
 	src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -37,8 +38,13 @@
 
 <!-- the mapid div will hold the map -->
 <div id="mapid" style="width: 600px; height: 400px;"></div>
+
 <button id="loadEarthquakeData" name="loadEarthquakeData" onclick="getEarthquakeData ()">Click here to load the Earthquake data </button>
 <button id="removeEarthquakeData" name="removeEarthquakeData" onclick="removeEarthquakeData()">Click here to remove the Earthquake data </button>
+
+<button id="loadPOIData" name="loadPOIData" onclick="getPOIData ()">Click here to load the POI data </button>
+<button id="removePOIData" name="removePOIData" onclick="removePOIData()">Click here to remove the POI data </button>
+
 <!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 
 <script>
