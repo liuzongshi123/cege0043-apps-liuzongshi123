@@ -1,7 +1,7 @@
 var POILayer;
 
 function getPOIData(){
-    var layerURL = "https://developer.cege.ucl.ac.uk:30251/getPOI";
+    var layerURL = "https://developer.cege.ucl.ac.uk:30283/getPOI";
     var testMarkerRed = L.AwesomeMarkers.icon({
     		icon: 'play',
     		markerColor: 'red'
