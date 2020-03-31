@@ -2,14 +2,6 @@ var RoadLayer;
 
 function getRoadData(){
     var layerURL = "https://developer.cege.ucl.ac.uk:30283/getGeoJSON/london_highway/geom";
-    var testMarkerRed = L.AwesomeMarkers.icon({
-    		icon: 'play',
-    		markerColor: 'red'
-    	});
-    var testMarkerBlack = L.AwesomeMarkers.icon({
-    		icon: 'play',
-    		markerColor: 'black'
-    	});
     $.ajax({url: layerURL, crossDomain: true, success: function(result){
     	console.log(result); // check that the data is correct
     	// load the geoJSON layer
@@ -21,20 +13,19 @@ function getRoadData(){
            if (!layer.feature.properties.name){ 
             nullName = true; 
             }
-            console.log(nullName); 
             switch (true) { 
                 case (nullName === true): 
-                layer.setStyle(style3);
-                break; 
-            default:
-                // all streets with actual names
-                var highStreet = layer.feature.properties.name.toLowerCase().indexOf("high");
-                switch (true) { 
-                    case (highStreet > -1):
-                    layer.setStyle(style1); 
+                    layer.setStyle(style3);
                     break; 
-                default: 
-                    layer.setStyle(style2); 
+                default:
+                    // all streets with actual names
+                    var highStreet = layer.feature.properties.name.toLowerCase().indexOf("high");
+                    switch (true) { 
+                        case (highStreet > -1):
+                            layer.setStyle(style1); 
+                            break; 
+                    default: 
+                        layer.setStyle(style2); 
                     } 
                 } // end outer switch 
  			}, // end of point to layer
