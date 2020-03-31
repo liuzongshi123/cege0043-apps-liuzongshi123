@@ -2,6 +2,20 @@ var POILayer;
 
 function getPOIData(){
     var layerURL = "https://developer.cege.ucl.ac.uk:30283/getPOI";
+    var isParking = feature.properties.name.toLowerCase().indexOf("parking"); 
+    console.log(isParking); 
+    switch (true) { 
+        case (isParking > -1): 
+        return L.marker(latlng, 
+    {icon:testMarkerRed}).bindPopup("<b>"+feature.properties.name +"</b>"); 
+        break; 
+
+    default: 
+        return L.marker(latlng, 
+    {icon:testMarkerBlack}).bindPopup("<b>"+feature.properties.name +"</b>"); 
+        break; 
+    };
+
     var testMarkerRed = L.AwesomeMarkers.icon({
     		icon: 'play',
     		markerColor: 'red'
@@ -20,7 +34,7 @@ function getPOIData(){
 			// look at the GeoJSON file - specifically at the properties - to see the earthquake magnitude and use a different marker depending on this value
  			// also include a pop-up that shows the place value of the earthquakes
  				return L.marker(latlng,  
- 					{icon:testMarkerRed}).bindPopup("<b>"+feature.properties.place +"</b>");
+ 					{icon:isParking}).bindPopup("<b>"+feature.properties.place +"</b>");
  	
  			}, // end of point to layer
  		}).addTo(mymap);
