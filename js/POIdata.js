@@ -35,7 +35,7 @@ function getPOIData(){
  		mymap.fitBounds(POILayer.getBounds());
  		} // end of the inner function
 	}); // end of the ajax request
-} // end of the getEarthquakeData function
+} // end of the getPOIData function
 
 function removePOIData() { 
     alert("remove the POI data here"); 
