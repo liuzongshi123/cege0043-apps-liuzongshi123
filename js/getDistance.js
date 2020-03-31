@@ -1,6 +1,6 @@
 function getDistance() { 
 	alert('getting distance'); 
-// getDistanceFromPoint is the function called once the distance has been found 
+	// getDistanceFromPoint is the function called once the distance has been found 
 	navigator.geolocation.getCurrentPosition(getDistanceFromPoint); 
 }
 
