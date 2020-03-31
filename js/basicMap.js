@@ -1,7 +1,13 @@
 var mymap; // global variable to store the map
 
-function loadLeafletMap(){
-mymap = L.map('mapid').setView([51.505, -0.09], 13);
+function getLocation() {  
+	navigator.geolocation.getCurrentPosition(loadLeafletMap); 
+} 
+
+
+function loadLeafletMap(CurrentLocation){
+
+mymap = L.map('mapid').setView([CurrentLocation.coords.latitude, CurrentLocation.coords.longitude], 13);
 
 // load the tiles
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -11,8 +17,5 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 		'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 	id: 'mapbox.streets'
 }).addTo(mymap);
-
-// now add the click event detector to the map
-mymap.on('click', onMapClick);
 
 } //end code to add the leaflet map

@@ -38,6 +38,8 @@
 <div id="mapid" style="width: 600px; height: 400px;"></div>
 <div id='showLocation'>Location will be displayed here</div>
 
+<button id='trackLocation' onclick='trackLocation()'>Click Me to Get Your Location</button>
+
 <!-- the following script will load the map and set the default view and zoom, as well as loading the basemap tiles -->
 
 <script>
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(){
 }, false);
 
 function loadMap(){
-	loadLeafletMap();
+	getLocation();
 }
 </script>
 
