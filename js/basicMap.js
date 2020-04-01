@@ -1,9 +1,12 @@
 var mymap; // global variable to store the map
 
-function getLocation() {  
-	navigator.geolocation.getCurrentPosition(loadLeafletMap); 
-} 
-
+function getLocation() { 
+	if (navigator.geolocation) { 
+		navigator.geolocation.watchPosition(loadLeafletMap); 
+	} else { 
+		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."; 
+	} 
+}
 
 function loadLeafletMap(CurrentLocation){
 
