@@ -54,5 +54,5 @@ function showPosition(position) {
 		pointToLayer: function (feature, latlng) {
 			return L.marker(latlng,{icon:testMarkerPink});
 		}
-	}).addTo(mymap).bindPopup("<b>"+Location.properties.name+" "+Location.properties.popupContent+"<b>");
+	}).addTo(mymap).bindPopup("<b>"+Location.properties.popupContent+"</b>");
 }
