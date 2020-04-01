@@ -1,8 +1,10 @@
 var mymap; // global variable to store the map
+var Location; // global variable to store the map
 
-function getLocation() { 
+function trackLocation() { 
 	if (navigator.geolocation) { 
 		navigator.geolocation.watchPosition(loadLeafletMap); 
+		navigator.geolocation.watchPosition(showPosition);
 	} else { 
 		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."; 
 	} 
@@ -22,3 +24,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 } //end code to add the leaflet map
+
+function showPosition(position) { 
+	document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + 
+	"<br>Longitude: " + position.coords.longitude; 
+}
