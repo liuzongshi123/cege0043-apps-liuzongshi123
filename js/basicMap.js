@@ -31,7 +31,7 @@ function showPosition(position) {
 	"<br>Longitude: " + position.coords.longitude; 
 
 	// create a geoJSON feature
-	var Location = { 
+	Location = { 
 		"type": "Feature", 
 		"properties": { 
 			"name": "Position", 
