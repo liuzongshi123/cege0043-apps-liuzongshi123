@@ -1,10 +1,10 @@
 var mymap; // global variable to store the map
-var Location; // global variable to store the map
+var Location; // global variable to store the Location
 
 function trackLocation() { 
 	if (navigator.geolocation) { 
-		navigator.geolocation.watchPosition(loadLeafletMap); 
-		navigator.geolocation.watchPosition(showPosition);
+		navigator.geolocation.watchPosition(loadLeafletMap); //Reload leaflet map 
+		navigator.geolocation.watchPosition(showPosition); //Call show position function
 	} else { 
 		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."; 
 	} 
@@ -25,7 +25,34 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 } //end code to add the leaflet map
 
-function showPosition(position) { 
+function showPosition(position) {
+	//Show the position on web 
 	document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude + 
 	"<br>Longitude: " + position.coords.longitude; 
+
+	// create a geoJSON feature
+	var Location = { 
+		"type": "Feature", 
+		"properties": { 
+			"name": "Position", 
+			"popupContent": "Here is your current locaiton" 
+		}, 
+		"geometry": { 
+			"type": "Point", 
+			"coordinates": [position.coords.longitude, position.coords.latitude] 
+		} 
+	};
+
+	// create a icon 
+	var testMarkerPink = L.AwesomeMarkers.icon({
+		icon:'play',
+		markerColor:'pink'
+	});
+
+	// add it to the map 
+	L.geoJSON(Location, {
+		pointToLayer: function (feature, latlng) {
+			return L.marker(latlng,{icon:testMarkerPink});
+		}
+	}).addTo(mymap).bindPopup("<b>"+Location.properties.name+" "+Location.properties.popupContent+"<b>");
 }
