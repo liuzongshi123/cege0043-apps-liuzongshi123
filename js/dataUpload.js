@@ -29,6 +29,7 @@ function startDataUpload() {
 	// finally add the port id
 	postString = postString +"&port_id="+httpsPortNumberAPI;
 	alert (postString);
+	processData(postString);
 }// close off the startDataUpload function	
 
 function processData(postString) { 
@@ -47,5 +48,3 @@ function dataUploaded(data) {
 	// change the DIV to show the response 
 	document.getElementById("dataUploadResult").innerHTML = JSON.stringify(data); 
 }
-
-processData(postString);
