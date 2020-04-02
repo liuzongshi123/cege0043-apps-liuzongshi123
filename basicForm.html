@@ -2,6 +2,10 @@
 <head> 
 
 <title>Simple Form Creation Example</title> 
+
+<script src="js/uploadData.js"> </script>
+<script src="js/utilities.js"></script>
+
 </head> 
 <body> 
 <h1> This is a simple form</h1> 
@@ -33,5 +37,25 @@
 <br /> 
 <label for="latitude">Latitude</label><input type="text" size="25" id="latitude"/><br /> 
 <label for="longitude">Longitude</label><input type="text" size="25" id="longitude"/><br /> 
+
+<p>Click here to upload the data</p> 
+<button id="startUpload" onclick="startDataUpload()">Start Data Upload</button> 
+<br /> 
+<br /> 
+<div id="dataUploadResult">The result of the upload goes here</div> 
+<br /> 
+<br />
+
+<script> function loadMap() { 
+	getPorts(); 
+} 
+
+document.addEventListener('DOMContentLoaded', function() { 
+	console.log("listener domcontentloaded"); 
+	loadMap(); 
+}, false); 
+
+</script>
+
 
 </body>
