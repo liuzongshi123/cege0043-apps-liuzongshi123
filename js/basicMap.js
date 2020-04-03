@@ -1,12 +1,13 @@
 var mymap; // global variable to store the map
 
 function getLocation() { 
-	navigator.geolocation.getCurrentPosition(loadLeafletMap); 
+	navigator.geolocation.getCurrentPosition(loadLeafletMap);
+	console.log("getLocation");
 } 
 
 function loadLeafletMap(CurrentLocation){
 
-mymap = L.map('mapid').setView([CurrentLocation.coords.latitude, CurrentLocation.coords.longitude], 4);
+mymap = L.map('mapContainer').setView([CurrentLocation.coords.latitude, CurrentLocation.coords.longitude], 4);
 
 // load the tiles
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
