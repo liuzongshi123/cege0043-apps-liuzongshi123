@@ -1,16 +1,19 @@
-var popup = L.popup(); // create a custom popup as a global variable
+// create an array to store all the click points
+var clickLocationLayer = [];
 
-var testMarkerPink = L.AwesomeMarkers.icon({
-		icon:'play',
-		markerColor:'pink'
-	});
-
+// Add a marker when user click the map
 function onMapClick(e) {
-    	popup
-    			.setLatLng(e.latlng)
-    			.setContent("You clicked the map at "+e.latlng.toString())
-    			.openOn(mymap);
+    clickLocationLayer.push(L.marker(e.latlng,{icon:testMarkerPink}).addTo(mymap).
+    	bindPopup("You clicked the map at "+e.latlng.toString()).
+    	openPopup()
+    	);
+    removeclickLayers();
     }
 
-///L.marker([position.coords.latitude,position.coords.longitude],
-			//{icon:testMarkerPink}).addTo(mymap)
+//Remove the last click
+function removeclickLayers() {
+	clickLocationLayer.reverse();
+	for (var i=clickLocationLayer.length-1; i > 0;i--) {
+	mymap.removeLayer(clickLocationLayer[i]);
+	};
+}

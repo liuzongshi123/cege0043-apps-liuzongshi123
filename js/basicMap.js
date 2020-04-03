@@ -2,7 +2,6 @@ var mymap; // global variable to store the map
 
 function getLocation() { 
 	navigator.geolocation.getCurrentPosition(loadLeafletMap);
-	console.log("getLocation");
 } 
 
 function loadLeafletMap(CurrentLocation){
@@ -19,7 +18,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 	mymap.on('click', onMapClick);
-	
+
 }; //end code to add the leaflet map
 
 
