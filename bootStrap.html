@@ -23,8 +23,12 @@
 
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
     integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="crossorigin=""></script>
-    
 
+
+    <!-- the following CSS is used to set the size of the Map -->
+    <style type="text/css"> #mapid { height: 180px; }</style>
+
+    
     <!-- the following links incorporate the CSS required for custom icon creation -->
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -38,11 +42,13 @@
     <!-- load Referenced Script --> 
     <script src="js/leaflet.awesome-markers.js"></script>
 
+    <script src="js/menu.js"></script>
+
     <script src="js/basicMap.js"></script>
 
     <script src="js/trackLocation.js"></script>
-
-    <script src="js/utilities.js"></script>
+h111
+1    <script src="js/utilities.js"></script>
 
     <script src="js/sb-admin-2.js"></script>
 
@@ -50,27 +56,32 @@
     <title>Location-Based Quiz App</title>
     <!-- adapted from: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ -->
 
+
   </head>
   <body id="page-top">
     <div id="wrapper">
 
+
       <!-- Sidebar -->
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" >
-          <div class="sidebar-brand-text mx-3">CEGE0043 App</div>
+          <div class="sidebar-brand-text mx-3">Location-Based Quiz App</div>
         </a>
+
 
         <!-- Divider -->
         <hr class="sidebar-divider">
+
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item d-none d-lg-block" >
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" onclick="alert('menu1');" aria-expanded="true" aria-controls="collapseOne">
             <!-- the next line is the cog image -->
             <i class="fas fa-fw fa-cog"></i>
-            <span>Menu 1</span>
+            <span>Question Form</span>
           </a>
 
         </li>
