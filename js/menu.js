@@ -8,8 +8,20 @@ function clickEvent() {
 
 // Add a marker when user click the map
 function onMapClick(e) {
+	// Create an element to hold all text and markup
+	var container = $('<div />');
+
+	// Delegate all event handling for the container itself and its contents to the container
+	container.on('click',function() {
+    alert("test");
+	});
+
+	var text = "Create a question at "+e.latlng.toString()
+	container.html(text+"<br><button style='display:block;margin:0 auto'>Create Question Here</button>.");
+
+
     clickLocationLayer.push(L.marker(e.latlng).addTo(mymap).
-    	bindPopup("Create a question at "+e.latlng.toString()).
+    	bindPopup(container[0]).
     	openPopup()
     	);
     removeclickLayers();
