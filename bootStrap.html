@@ -47,8 +47,8 @@
     <script src="js/basicMap.js"></script>
 
     <script src="js/trackLocation.js"></script>
-h111
-1    <script src="js/utilities.js"></script>
+
+    <script src="js/utilities.js"></script>
 
     <script src="js/sb-admin-2.js"></script>
 
@@ -78,22 +78,43 @@ h111
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item d-none d-lg-block" >
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" onclick="alert('menu1');" aria-expanded="true" aria-controls="collapseOne">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             <!-- the next line is the cog image -->
             <i class="fas fa-fw fa-cog"></i>
             <span>Question Form</span>
           </a>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Question Form</h6>
+              <a class="collapse-item"  onclick="alert('menu 7');">Click to Get LatLng</a>
+              <a class="collapse-item"  onclick="alert('menu 7');">Question Form</a>
+              <a class="collapse-item"  onclick="alert('menu 7');">Remove Question Form</a>
+            </div>
+          </div>
+        </li>
+    
 
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a class="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Existing Points</span>
+          </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Existing Points</h6>
+              <a class="collapse-item"  onclick="alert('menu 7');">Load Points</a>
+              <a class="collapse-item"  onclick="alert('menu 7');">Remove Existing Points</a>
+            </div>
+          </div>
         </li>
 
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item d-lg-none" >
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Menu 2</span>
+            <span>Existing Points</span>
           </a>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -104,19 +125,8 @@ h111
           </div>
         </li>
 
-        <!-- Nav Item - Pages Collapse Menu -->
-        <li class="nav-item">
-          <a class="nav-link collapsed"  data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Menu 5</span>
-          </a>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Menu 6</h6>
-              <a class="collapse-item"  onclick="alert('menu 7');">Menu 7</a>
-            </div>
-          </div>
-        </li>
+
+
 
 
         <!-- Nav Item - Pages Collapse Menu -->
