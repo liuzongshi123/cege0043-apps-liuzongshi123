@@ -18,6 +18,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets'
 }).addTo(mymap);
 
+	mymap.on('click', onMapClick);
+	
 }; //end code to add the leaflet map
 
 
