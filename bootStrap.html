@@ -58,8 +58,6 @@
 
     <script src="js/sb-admin-2.js"></script>
 
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <title>Location-Based Quiz App</title>
     <!-- adapted from: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ -->
@@ -263,16 +261,16 @@
           </div>          
           
           <div class="form-group d-flex justify-content-center">
-          <label for="Correct Answer" class="control-label">Correct Answer</label>
+          <label for="correct_answer" class="control-label">Correct Answer</label>
           <div class="col-sm-6 d-flex justify-content-around">
-            <div>
-            <input type="radio" id="optionsRadios1" checked = "yes">Answer 1</div>
-            <div>
-            <input type="radio" id="optionsRadios2">Answer 2</div>
-            <div>
-            <input type="radio" id="optionsRadios3">Answer 3</div>
-            <div>
-            <input type="radio" id="optionsRadios4">Answer 4</div>
+            <label class="radio-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios1" value="option1" checked>Answer 1</label>
+            <label class="radio-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="option2">Answer 2</label>
+            <label class="radio-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option3">Answer 3</label>
+            <label class="radio-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option4">Answer 4</label>            
           </div> 
           </div>
           
