@@ -50,7 +50,7 @@
 
     <script src="js/basicMap.js"></script>
 
-    <script src="js/clickevent.js"></script>
+    <script src="js/uploadData.js"></script>
 
     <script src="js/trackLocation.js"></script>
 
@@ -58,6 +58,8 @@
 
     <script src="js/sb-admin-2.js"></script>
 
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <title>Location-Based Quiz App</title>
     <!-- adapted from: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ -->
@@ -275,8 +277,10 @@
           </div>
           
           <div class="form-group d-flex justify-content-center">
-          <button id="create_question" onclick="alert('menu 10')">Create Question</button> 
+          <button type="button" id="create_question" onclick="startDataUpload(question_position)">Create Question</button> 
           </div>
+
+          <div class="form-group d-flex justify-content-center" id="dataUploadResult">The result of the upload goes here</div> 
         </form>
         </div>
         

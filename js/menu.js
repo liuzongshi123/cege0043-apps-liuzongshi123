@@ -1,5 +1,7 @@
 // create an array to store all the click points
 var clickLocationLayer = [];
+var question_position;
+
 
 function clickEvent() {
 	mymap.on('click', onMapClick);
@@ -14,6 +16,7 @@ function onMapClick(e) {
 	// Delegate all event handling for the container itself and its contents to the container
 	container.on('click',function() {
     StartCreation();
+    question_position = e;
 	});
 
 	var text = "Create a question at "+e.latlng.toString()
