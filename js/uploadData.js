@@ -51,7 +51,7 @@ function dataUploaded(data) {
 	document.getElementById("dataUploadResult").innerHTML = JSON.stringify(data); 
 }
 
-function deleteRecord() {
+function deleteQuestion() {
 	var deleteID = document.getElementById("deleteID").value;
 	var deleteString = "id="+deleteID + "&port_id="+httpsPortNumberAPI;
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/deleteFormData";
@@ -59,11 +59,11 @@ function deleteRecord() {
 		url: serviceUrl, 
 		crossDomain: true, 
 		type: "POST", 
-		success: function(data){console.log(data); dataDeleted(data);}, 
+		success: function(data){console.log(data); questionDeleted(data);}, 
 		data: deleteString 
 });
 }
 
-function dataDeleted(data){ 
+function questionDeleted(data){ 
 	document.getElementById("dataDeleteResult").innerHTML = JSON.stringify(data); 
 }
