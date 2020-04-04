@@ -13,7 +13,7 @@ function onMapClick(e) {
 
 	// Delegate all event handling for the container itself and its contents to the container
 	container.on('click',function() {
-    alert("test");
+    StartCreation();
 	});
 
 	var text = "Create a question at "+e.latlng.toString()
@@ -34,3 +34,13 @@ function removeclickLayers() {
 	mymap.removeLayer(clickLocationLayer[i]);
 	};
 }
+
+function StartCreation() {
+  document.getElementById('question_creation').style.display = 'block'
+}
+
+
+function StopCreation() {
+  document.getElementById('question_creation').style.display = 'none'
+}
+
