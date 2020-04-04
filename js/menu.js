@@ -36,11 +36,18 @@ function removeclickLayers() {
 }
 
 function StartCreation() {
-  document.getElementById('question_creation').style.display = 'block'
+  document.getElementById('question_creation').style.display = 'block';
+  document.getElementById('modification').style.display = 'none';
+}
+
+function modification() {
+  document.getElementById('modification').style.display = 'block';
+  document.getElementById('question_creation').style.display = 'none';
 }
 
 
 function StopCreation() {
-  document.getElementById('question_creation').style.display = 'none'
+  document.getElementById('question_creation').style.display = 'none';
+  document.getElementById('modification').style.display = 'none';
 }
 
