@@ -18,6 +18,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 }).addTo(mymap);
 
 if($(window).width() < 990) {
+	trackLocation();	
     start();
   };
 

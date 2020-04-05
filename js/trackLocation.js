@@ -27,6 +27,7 @@ function showPosition(position) {
 		L.marker([position.coords.latitude,position.coords.longitude],
 			{icon:testMarkerPink}).addTo(mymap).bindPopup("Here is Your Position")
 		); 
+	mymap.setView([position.coords.latitude,position.coords.longitude],12);
 	removeLocationLayers();
 };
 

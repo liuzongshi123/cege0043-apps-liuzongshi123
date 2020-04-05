@@ -7,7 +7,7 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	}}); //end of the AJAX call
 } // end of getFormData
 
-function start(){ 
+function start(){
     getFormData();
     getDistance(); 
 } 
