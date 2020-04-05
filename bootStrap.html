@@ -305,8 +305,11 @@
           <label for="answer_id" class="control-label">Answer ID</label>
           <div class="col-sm-6"><input type="text" class="form-control" id="answer_id">
             </div>
-          <button class='btn btn-primary btn-xs' id="delete_answer" onclick="alert('menu 9')">Delete Answer</button> 
+          <button class='btn btn-primary btn-xs' type="button" id="delete_answer" onclick="deleteAnswer()">Delete Answer</button> 
           </div>
+
+          <div class="form-group d-flex justify-content-center" id="AnswerDeleteResult">The result of the delete goes here</div> 
+
         </form>
         </div>
 

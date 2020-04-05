@@ -45,3 +45,20 @@ function processAnswer(postString) {
 		data: postString 
 	}); 
 }
+
+function deleteAnswer() {
+	var deleteID = document.getElementById("answer_id").value;
+	var deleteString = "id="+deleteID + "&port_id="+httpsPortNumberAPI;
+	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/deleteAnswerData";
+	$.ajax({ 
+		url: serviceUrl, 
+		crossDomain: true, 
+		type: "POST", 
+		success: function(data){console.log(data); AnswerDeleted(data);}, 
+		data: deleteString 
+});
+}
+
+function AnswerDeleted(data){ 
+	document.getElementById("AnswerDeleteResult").innerHTML = JSON.stringify(data); 
+}
