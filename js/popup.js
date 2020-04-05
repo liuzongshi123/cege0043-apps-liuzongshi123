@@ -72,7 +72,6 @@ function checkAnswer(questionID) {
 	} 
 	// now close the popup 
 	mymap.closePopup();
-
 	// the code to upload the answer to the server would go here 
 	// call an AJAX routine using the data 
 	// the answerSelected variable holds the number of the answer 
