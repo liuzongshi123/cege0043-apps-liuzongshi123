@@ -1,6 +1,6 @@
 function getFormData() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/getGeoJSON/formdata/location",
+	"/getGeoJSON/quizquestions/location",
 		crossDomain: true,
 		success: function(result){
 		formDataResponse(result);
@@ -9,7 +9,8 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 
 function formDataResponse(result){ 
 	var formData = result.responseText; 
-	loadFormData(formData); 
+	loadFormData(formData);
+	console.log("123123");  
 } 
 
 // keep the layer global so that we can automatically pop up a 
@@ -45,6 +46,7 @@ function loadFormData(formData) {
 			},
 		}).addTo(mymap);
 	mymap.fitBounds(formLayer.getBounds()); 
+	console.log("234234");
 }
 
 function checkAnswer(questionID) {
