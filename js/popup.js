@@ -3,14 +3,16 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	"/getGeoJSON/quizquestions/location",
 		crossDomain: true,
 		success: function(result){
-		formDataResponse(result);
+		alert (result.responseText);	
+		loadFormData(result);
 	}}); //end of the AJAX call
 } // end of getFormData
 
 function formDataResponse(result){ 
 	var formData = result.responseText; 
 	loadFormData(formData);
-	console.log("123123");  
+	console.log(formData);
+	alert (formData);  
 } 
 
 // keep the layer global so that we can automatically pop up a 
@@ -20,10 +22,10 @@ function formDataResponse(result){
 var formLayer; 
 function loadFormData(formData) { 
 	// convert the text received from the server to JSON 
-	var formJSON = JSON.parse(formData);
+
 
 	// load the geoJSON layer
-	formLayer = L.geoJson(formJSON,
+	formLayer = L.geoJson(formData,
 		{
 			// use point to layer to create the points 
 			pointToLayer: function (feature, latlng)
