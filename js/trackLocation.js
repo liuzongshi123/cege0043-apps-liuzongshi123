@@ -25,7 +25,7 @@ function showPosition(position) {
 	// will then contain the new marker point 
 	trackLocationLayer.push(
 		L.marker([position.coords.latitude,position.coords.longitude],
-			{icon:testMarkerPink}).addTo(mymap)
+			{icon:testMarkerPink}).addTo(mymap).bindPopup("Here is Your Position")
 		); 
 	removeLocationLayers();
 };
