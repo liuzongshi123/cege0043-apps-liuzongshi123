@@ -50,9 +50,7 @@ function loadFormData(formData) {
 			htmlString = htmlString + "</div>";
 			return L.marker(latlng).bindPopup(htmlString);
 			},
-		}).addTo(mymap);
-	mymap.fitBounds(formLayer.getBounds()); 
-
+		});
 }
 
 function checkAnswer(questionID) {
@@ -109,13 +107,23 @@ function closestFormPoint(position) {
 			closestFormPoint = layer.feature.properties.id; 
 		}
 	});
+
+	$.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+	"/getGeoJSON/quizquestions/location",
+		crossDomain: true,
+		success: function(result){	
+		loadFormData(result);
+	}}); //end of the AJAX call
+
+
 	// for this to be a proximity alert, the minDistance must be 
 	// closer than a given distance - you can check that here 
 	// using an if statement 
 	// show the popup for the closest point
 	formLayer.eachLayer(function(layer) {
 		if (layer.feature.properties.id == closestFormPoint){
-			layer.openPopup();
+			mymap.setView([layer.getLatLng().lat, layer.getLatLng().lng],12);
+			layer.addTo(mymap).openPopup();
 		}
 	});
 }

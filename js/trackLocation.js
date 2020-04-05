@@ -3,7 +3,8 @@ var geoLocationID; // store the ID of the location tracker so that it can be use
 
 function trackLocation() { 
 	if (navigator.geolocation) {
-		geoLocationID = navigator.geolocation.watchPosition(showPosition);  //Call show position function
+		geoLocationID = navigator.geolocation.watchPosition(showPosition);
+		geoLocationID = navigator.geolocation.watchPosition(closestFormPoint);  //Call show position function
 	} else { 
 		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."; 
 	} 
