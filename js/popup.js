@@ -7,6 +7,12 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	}}); //end of the AJAX call
 } // end of getFormData
 
+function start(){ 
+    getFormData();
+    getDistance(); 
+} 
+
+
 function formDataResponse(result){ 
 	var formData = result.responseText; 
 	loadFormData(formData);
@@ -130,5 +136,6 @@ function calculateDistance(lat1, lon1, lat2, lon2, unit) {
 	if (unit=="N") { dist = dist * 0.8684 ;} // convert miles to nautical miles 
 	return dist; 
 }
+
 
 

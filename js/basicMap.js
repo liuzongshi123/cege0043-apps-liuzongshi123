@@ -17,10 +17,10 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets'
 }).addTo(mymap);
 
-  if($(window).width() < 768) { 
-    getFormData();
-    getDistance();
+if($(window).width() < 990) {
+    start();
   };
+
 }; //end code to add the leaflet map
 
 
