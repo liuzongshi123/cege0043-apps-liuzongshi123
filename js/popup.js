@@ -50,9 +50,11 @@ function loadFormData(formData) {
 			htmlString = htmlString + "</div>";
 			return L.marker(latlng).bindPopup(htmlString);
 			},
+
 		});
 }
 
+var questionLayer;
 function checkAnswer(questionID) {
 	// get the answer from the hidden div 
 	// NB - do this BEFORE you close the pop-up as when you close the pop-up the DIV is destroyed
@@ -67,7 +69,9 @@ function checkAnswer(questionID) {
 		}
 		if ((document.getElementById(questionID+"_"+i).checked) && (i == answer)) { 
 			alert ("Well done"); 
-			correctAnswer = true; 
+			correctAnswer = true;
+			questionLayer.setIcon(testMarkerGreen);
+
 		} 
 	}
 	if (correctAnswer === false) { 
@@ -104,17 +108,9 @@ function closestFormPoint(position) {
 		var distance = calculateDistance(userlat,userlng,layer.getLatLng().lat, layer.getLatLng().lng, 'K');
 		if (distance < minDistance){
 			minDistance = distance;
-			closestFormPoint = layer.feature.properties.id; 
+			closestFormPoint = layer.feature.properties.id;
 		}
 	});
-
-	$.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/getGeoJSON/quizquestions/location",
-		crossDomain: true,
-		success: function(result){	
-		loadFormData(result);
-	}}); //end of the AJAX call
-
 
 	// for this to be a proximity alert, the minDistance must be 
 	// closer than a given distance - you can check that here 
@@ -123,9 +119,11 @@ function closestFormPoint(position) {
 	formLayer.eachLayer(function(layer) {
 		if (layer.feature.properties.id == closestFormPoint){
 			mymap.setView([layer.getLatLng().lat, layer.getLatLng().lng],12);
+			questionLayer = layer;
 			layer.addTo(mymap).openPopup();
 		}
 	});
+	console.log(formLayer);
 }
 
 // code adapted from https://www.htmlgoodies.com/beyond/javascript/calculate-the-distance-between-two-points-in-your-web-apps.html
