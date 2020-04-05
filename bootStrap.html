@@ -314,7 +314,7 @@
         </div>
 
 
-        <div id="userlocation">
+        <div id="userlocation" class="d-lg-none">
           <form class="form-horizontal" role="form">
           <div class="form-group d-flex justify-content-center">
             <h3>Here is Your Position</h3> </div>
@@ -339,7 +339,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log("listener domcontentloaded");
-  StopCreation();
+  document.getElementById('question_creation').style.display = 'none';
+  document.getElementById('modification').style.display = 'none';
   loadMap();
 }, false);
 

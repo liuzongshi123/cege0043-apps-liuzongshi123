@@ -17,7 +17,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets'
 }).addTo(mymap);
 
-if($(window).width() < 990) {
+if($(window).width() <= 991) {
 	trackLocation();	
     start();
   };
