@@ -2,8 +2,7 @@ function getFormData() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	"/getGeoJSON/quizquestions/location",
 		crossDomain: true,
-		success: function(result){
-		alert (result.responseText);	
+		success: function(result){	
 		loadFormData(result);
 	}}); //end of the AJAX call
 } // end of getFormData
@@ -11,7 +10,6 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 function formDataResponse(result){ 
 	var formData = result.responseText; 
 	loadFormData(formData);
-	console.log(formData);
 	alert (formData);  
 } 
 
@@ -42,10 +40,9 @@ function loadFormData(formData) {
 			// now include a hidden element with the answer 
 			// in this case the answer is alwasy the first choice 
 			// for the assignment this will of course vary - you can use feature.properties.correct_answer
-			htmlString = htmlString + "<div id=answer" + feature.properties.id + " hidden>1</div>";
+			htmlString = htmlString + "<div id=answer" + feature.properties.id + " hidden>" + feature.properties.correct_answer + "</div>";
 			htmlString = htmlString + "</div>";
 			return L.marker(latlng).bindPopup(htmlString);
-			console.log(feature.properties.id);
 			},
 		}).addTo(mymap);
 	mymap.fitBounds(formLayer.getBounds()); 
