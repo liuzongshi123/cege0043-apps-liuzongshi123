@@ -77,6 +77,7 @@ function checkAnswer(questionID) {
 	if (correctAnswer === false) { 
 	// they didn't get it right 
 	alert("Better luck next time"); 
+	questionLayer.setIcon(testMarkerRed);
 	} 
 	// now close the popup 
 	mymap.closePopup();
@@ -123,7 +124,6 @@ function closestFormPoint(position) {
 			layer.addTo(mymap).openPopup();
 		}
 	});
-	console.log(formLayer);
 }
 
 // code adapted from https://www.htmlgoodies.com/beyond/javascript/calculate-the-distance-between-two-points-in-your-web-apps.html
