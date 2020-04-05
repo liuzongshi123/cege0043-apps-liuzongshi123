@@ -45,10 +45,11 @@ function loadFormData(formData) {
 			htmlString = htmlString + "<div id=answer" + feature.properties.id + " hidden>1</div>";
 			htmlString = htmlString + "</div>";
 			return L.marker(latlng).bindPopup(htmlString);
+			console.log(feature.properties.id);
 			},
 		}).addTo(mymap);
 	mymap.fitBounds(formLayer.getBounds()); 
-	console.log("234234");
+
 }
 
 function checkAnswer(questionID) {
