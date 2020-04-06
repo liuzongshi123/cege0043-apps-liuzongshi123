@@ -1,21 +1,6 @@
+var status = true;
 function checkDataUpload() {
-	if (document.getElementById("question_title").value == "") {
-	document.getElementById("question_title").classList.add("is-invalid");
-	document.getElementById("error_question_title").innerHTML = "Please Enter a Valid Question Title";
-	return false;
-	}
-	document.getElementById("question_title").classList.remove("is-invalid");
-	document.getElementById("question_title").classList.add("is-valid");
-	document.getElementById("error_question_title").innerHTML = "";
 
-	if (document.getElementById("question_text").value == "") {
-	document.getElementById("question_text").classList.add("is-invalid");
-	document.getElementById("error_question_text").innerHTML = "Please Enter a Valid Question Text";
-	return false;
-	}
-	document.getElementById("question_text").classList.remove("is-invalid");
-	document.getElementById("question_text").classList.add("is-valid");
-	document.getElementById("error_question_text").innerHTML = "";
 }
 
 
@@ -25,6 +10,7 @@ function checkDataUpload() {
 
 function startDataUpload(position) { 
 	alert ("start data upload");
+
 	if (document.getElementById("question_title").value == "") {
 	document.getElementById("question_title").classList.add("is-invalid");
 	document.getElementById("error_question_title").innerHTML = "Please Enter a Valid Question Title";
@@ -42,6 +28,42 @@ function startDataUpload(position) {
 	document.getElementById("question_text").classList.remove("is-invalid");
 	document.getElementById("question_text").classList.add("is-valid");
 	document.getElementById("error_question_text").innerHTML = "";
+
+	if (document.getElementById("answer_1").value == "") {
+	document.getElementById("answer_1").classList.add("is-invalid");
+	document.getElementById("error_answer_1").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("answer_1").classList.remove("is-invalid");
+	document.getElementById("answer_1").classList.add("is-valid");
+	document.getElementById("error_answer_1").innerHTML = "";
+
+	if (document.getElementById("answer_2").value == "") {
+	document.getElementById("answer_2").classList.add("is-invalid");
+	document.getElementById("error_answer_2").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("answer_2").classList.remove("is-invalid");
+	document.getElementById("answer_2").classList.add("is-valid");
+	document.getElementById("error_answer_2").innerHTML = "";
+
+	if (document.getElementById("answer_3").value == "") {
+	document.getElementById("answer_3").classList.add("is-invalid");
+	document.getElementById("error_answer_3").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("answer_3").classList.remove("is-invalid");
+	document.getElementById("answer_3").classList.add("is-valid");
+	document.getElementById("error_answer_3").innerHTML = "";
+
+	if (document.getElementById("answer_4").value == "") {
+	document.getElementById("answer_4").classList.add("is-invalid");
+	document.getElementById("error_answer_4").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("answer_4").classList.remove("is-invalid");
+	document.getElementById("answer_4").classList.add("is-valid");
+	document.getElementById("error_answer_4").innerHTML = "";
 
 
 	var question_title = document.getElementById("question_title").value; 
@@ -76,6 +98,7 @@ function startDataUpload(position) {
 	postString = postString +"&port_id="+httpsPortNumberAPI;
 	alert (postString);
 	processData(postString);
+
 }// close off the startDataUpload function	
 
 function processData(postString) { 
