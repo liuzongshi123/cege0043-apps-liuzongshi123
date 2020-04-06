@@ -54,3 +54,15 @@ function StopCreation() {
   document.getElementById('modification').style.display = 'none';
 }
 
+var ranking;
+function getRanking() {
+$.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+  "/quizanswers/ranking",
+    crossDomain: true,
+    success: function(result){  
+    ranking = result[0].array_to_json[0].rank;
+    ranking = "Your Current Ranking is "+ranking+" !";
+      alert(ranking);
+  }}); //end of the AJAX call
+} // end of getRanking
+
