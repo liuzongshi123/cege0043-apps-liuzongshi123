@@ -20,9 +20,7 @@ function checkAnswer(questionID) {
 			// upload answer
 			console.log("start answer upload");
 			var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
-			alert (postString);
 			processAnswer(postString);
-			getCorrectNumber();
 		} 
 	}
 	if (answerSelected === 0) { 
@@ -39,11 +37,16 @@ function checkAnswer(questionID) {
 	// upload answer
 	console.log("start answer upload");
 	var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
-	alert (postString);
 	processAnswer(postString);
-	getCorrectNumber();
 	};
 	}
+	if (answerSelected !== 0) {
+	alertnumber();
+	}
+}
+
+function alertnumber() {
+	getCorrectNumber();
 }
 
 var correctnumber;
@@ -54,7 +57,7 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 		success: function(result){	
 		correctnumber = result[0].array_to_json[0].num_questions;
 		correctnumber = "You have answered "+correctnumber+" questions correctly!";
-		alert(correctnumber);
+  		alert(correctnumber);
 	}}); //end of the AJAX call
 } // end of getCorrectNumber
 
