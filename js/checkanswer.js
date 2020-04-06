@@ -74,6 +74,14 @@ function processAnswer(postString) {
 }
 
 function deleteAnswer() {
+	if (document.getElementById("answer_id").value == "") {
+	document.getElementById("answer_id").classList.add("is-invalid");
+	document.getElementById("error_answer_id").innerHTML = "Please Enter a Valid Question ID";
+	return false;
+	}
+	document.getElementById("answer_id").classList.remove("is-invalid");
+	document.getElementById("answer_id").classList.add("is-valid");
+	document.getElementById("error_answer_id").innerHTML = "";
 	var deleteID = document.getElementById("answer_id").value;
 	var deleteString = "id="+deleteID + "&port_id="+httpsPortNumberAPI;
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/deleteAnswerData";

@@ -31,7 +31,7 @@ function startDataUpload(position) {
 
 	if (document.getElementById("answer_1").value == "") {
 	document.getElementById("answer_1").classList.add("is-invalid");
-	document.getElementById("error_answer_1").innerHTML = "Please Enter a Valid Question Text";
+	document.getElementById("error_answer_1").innerHTML = "Please Enter a Valid Answer";
 	return false;
 	}
 	document.getElementById("answer_1").classList.remove("is-invalid");
@@ -40,7 +40,7 @@ function startDataUpload(position) {
 
 	if (document.getElementById("answer_2").value == "") {
 	document.getElementById("answer_2").classList.add("is-invalid");
-	document.getElementById("error_answer_2").innerHTML = "Please Enter a Valid Question Text";
+	document.getElementById("error_answer_2").innerHTML = "Please Enter a Valid Answer";
 	return false;
 	}
 	document.getElementById("answer_2").classList.remove("is-invalid");
@@ -49,7 +49,7 @@ function startDataUpload(position) {
 
 	if (document.getElementById("answer_3").value == "") {
 	document.getElementById("answer_3").classList.add("is-invalid");
-	document.getElementById("error_answer_3").innerHTML = "Please Enter a Valid Question Text";
+	document.getElementById("error_answer_3").innerHTML = "Please Enter a Valid Answer";
 	return false;
 	}
 	document.getElementById("answer_3").classList.remove("is-invalid");
@@ -58,13 +58,12 @@ function startDataUpload(position) {
 
 	if (document.getElementById("answer_4").value == "") {
 	document.getElementById("answer_4").classList.add("is-invalid");
-	document.getElementById("error_answer_4").innerHTML = "Please Enter a Valid Question Text";
+	document.getElementById("error_answer_4").innerHTML = "Please Enter a Valid Answer";
 	return false;
 	}
 	document.getElementById("answer_4").classList.remove("is-invalid");
 	document.getElementById("answer_4").classList.add("is-valid");
 	document.getElementById("error_answer_4").innerHTML = "";
-
 
 	var question_title = document.getElementById("question_title").value; 
 	var question_text = document.getElementById("question_text").value; 
@@ -113,12 +112,20 @@ function processData(postString) {
 }
 
 // create the code to process the response from the data server
-function dataUploaded(data) { 
+function dataUploaded(data) {
 	// change the DIV to show the response 
 	document.getElementById("dataUploadResult").innerHTML = JSON.stringify(data); 
 }
 
 function deleteQuestion() {
+	if (document.getElementById("deleteID").value == "") {
+	document.getElementById("deleteID").classList.add("is-invalid");
+	document.getElementById("error_deleteID").innerHTML = "Please Enter a Valid Question ID";
+	return false;
+	}
+	document.getElementById("deleteID").classList.remove("is-invalid");
+	document.getElementById("deleteID").classList.add("is-valid");
+	document.getElementById("error_deleteID").innerHTML = "";
 	var deleteID = document.getElementById("deleteID").value;
 	var deleteString = "id="+deleteID + "&port_id="+httpsPortNumberAPI;
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/deleteFormData";

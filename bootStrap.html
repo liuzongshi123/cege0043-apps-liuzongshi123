@@ -307,11 +307,13 @@
           </div> 
           </div>
           
+          <div class="form-group d-flex justify-content-center" id="dataUploadResult">The result of the upload goes here</div> 
+
           <div class="form-group d-flex justify-content-center">
           <button class='btn btn-primary btn-xs' type="button" id="create_question" onclick="startDataUpload(question_position)">Create Question</button> 
           </div>
 
-          <div class="form-group d-flex justify-content-center" id="dataUploadResult">The result of the upload goes here</div> 
+
         </form>
         </div>
         
@@ -323,11 +325,12 @@
           
           <div class="form-group d-flex justify-content-center">
           <label for="deleteID" class="control-label">Question ID</label>
-          <div class="col-sm-6"><input type="text" class="form-control" id="deleteID">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="deleteID">
             </div>
           <button class='btn btn-primary btn-xs' type="button" id="delete_question" onclick="deleteQuestion()">Delete Question</button>
           </div>
-          
+          <span class="text-danger d-flex justify-content-center" id="error_deleteID"></span>
           <div class="form-group d-flex justify-content-center" id="dataDeleteResult">The result of the delete goes here</div> 
 
           <div class="form-group d-flex justify-content-center">
@@ -336,7 +339,7 @@
             </div>
           <button class='btn btn-primary btn-xs' type="button" id="delete_answer" onclick="deleteAnswer()">Delete Answer</button> 
           </div>
-
+          <span class="text-danger d-flex justify-content-center" id="error_answer_id"></span>
           <div class="form-group d-flex justify-content-center" id="AnswerDeleteResult">The result of the delete goes here</div> 
 
         </form>
