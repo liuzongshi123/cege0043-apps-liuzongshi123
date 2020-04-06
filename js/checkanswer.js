@@ -15,14 +15,27 @@ function checkAnswer(questionID) {
 			alert ("Well done"); 
 			correctAnswer = true;
 			questionLayer.setIcon(testMarkerGreen);
-
+			// now close the popup 
+			mymap.closePopup();
+			// the code to upload the answer to the server would go here 
+			// call an AJAX routine using the data 
+			// the answerSelected variable holds the number of the answer 
+			// that the user picked
+			console.log("start answer upload");
+			var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
+			alert (postString);
+			processAnswer(postString);
 		} 
 	}
-	if (correctAnswer === false) { 
+	if (answerSelected === 0) { 
 	// they didn't get it right 
-	alert("Better luck next time"); 
-	questionLayer.setIcon(testMarkerRed);
-	} 
+	alert("Please Select an Answer!!");
+	}
+	else {	
+		if (correctAnswer === false) { 
+		// they didn't get it right 
+		alert("Better luck next time"); 
+		questionLayer.setIcon(testMarkerRed);
 	// now close the popup 
 	mymap.closePopup();
 	// the code to upload the answer to the server would go here 
@@ -33,6 +46,9 @@ function checkAnswer(questionID) {
 	var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
 	alert (postString);
 	processAnswer(postString);
+	};
+	}
+
 }
 
 function processAnswer(postString) { 
