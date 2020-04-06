@@ -17,9 +17,9 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 	id: 'mapbox.streets'
 }).addTo(mymap);
 
-if($(window).width() <= 991) {
-	trackLocation();	
-    start();
+if($(window).width() <= 991) {	
+    trackLocation();
+    getFormData();
   };
 
 }; //end code to add the leaflet map

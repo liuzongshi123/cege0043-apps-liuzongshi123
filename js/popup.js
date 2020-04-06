@@ -7,21 +7,6 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	}}); //end of the AJAX call
 } // end of getFormData
 
-function start(){
-    getFormData();
-    getDistance(); 
-} 
-
-
-function formDataResponse(result){ 
-	var formData = result.responseText; 
-	loadFormData(formData);
-	alert (formData);  
-} 
-
-// keep the layer global so that we can automatically pop up a 
-// pop-up menu on a point if necessary 
-// we can also use this to determine distance for the proximity alert 
 
 var formLayer; 
 function loadFormData(formData) { 
@@ -50,16 +35,11 @@ function loadFormData(formData) {
 			htmlString = htmlString + "</div>";
 			return L.marker(latlng).bindPopup(htmlString);
 			},
-
-		});
+		}).addTo(mymap);
+	mymap.fitBounds(formLayer.getBounds());
 }
 
 
-
-function getDistance() { 
-	// getDistanceFromPoint is the function called once the distance has been found 
-	navigator.geolocation.getCurrentPosition(closestFormPoint);
-}
 
 //Using the Layer for Distance Measurement – Proximity Alert
 function closestFormPoint(position) {
@@ -88,9 +68,8 @@ function closestFormPoint(position) {
 	// show the popup for the closest point
 	formLayer.eachLayer(function(layer) {
 		if (layer.feature.properties.id == closestFormPoint){
-			mymap.setView([layer.getLatLng().lat, layer.getLatLng().lng],12);
 			questionLayer = layer;
-			layer.addTo(mymap).openPopup();
+			layer.openPopup();
 		}
 	});
 }
