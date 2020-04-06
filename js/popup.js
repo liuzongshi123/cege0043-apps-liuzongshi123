@@ -39,7 +39,9 @@ function loadFormData(formData) {
 	mymap.fitBounds(formLayer.getBounds());
 }
 
-
+function removeFormData() { 
+	mymap.removeLayer(formLayer);
+}
 
 //Using the Layer for Distance Measurement – Proximity Alert
 function closestFormPoint(position) {
