@@ -22,6 +22,7 @@ function checkAnswer(questionID) {
 			var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
 			alert (postString);
 			processAnswer(postString);
+			getCorrectNumber();
 		} 
 	}
 	if (answerSelected === 0) { 
@@ -40,10 +41,23 @@ function checkAnswer(questionID) {
 	var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
 	alert (postString);
 	processAnswer(postString);
+	getCorrectNumber();
 	};
 	}
-
 }
+
+var correctnumber;
+function getCorrectNumber() {
+$.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+	"/quizanswers/correctnumber",
+		crossDomain: true,
+		success: function(result){	
+		correctnumber = result[0].array_to_json[0].num_questions;
+		correctnumber = "You have answered "+correctnumber+" questions correctly!";
+		alert(correctnumber);
+	}}); //end of the AJAX call
+} // end of getCorrectNumber
+
 
 function processAnswer(postString) { 
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/insertAnswerData" 
