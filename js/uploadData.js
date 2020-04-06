@@ -1,9 +1,47 @@
+function checkDataUpload() {
+	if (document.getElementById("question_title").value == "") {
+	document.getElementById("question_title").classList.add("is-invalid");
+	document.getElementById("error_question_title").innerHTML = "Please Enter a Valid Question Title";
+	return false;
+	}
+	document.getElementById("question_title").classList.remove("is-invalid");
+	document.getElementById("question_title").classList.add("is-valid");
+	document.getElementById("error_question_title").innerHTML = "";
+
+	if (document.getElementById("question_text").value == "") {
+	document.getElementById("question_text").classList.add("is-invalid");
+	document.getElementById("error_question_text").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("question_text").classList.remove("is-invalid");
+	document.getElementById("question_text").classList.add("is-valid");
+	document.getElementById("error_question_text").innerHTML = "";
+}
+
+
+
+
+
+
 function startDataUpload(position) { 
 	alert ("start data upload");
 	if (document.getElementById("question_title").value == "") {
-		document.getElementById("error_question_title_icon").className = "fas fa-times-circle";
-		document.getElementById("error_question_title").innerHTML = "Please enter a valid question_title";
-	};
+	document.getElementById("question_title").classList.add("is-invalid");
+	document.getElementById("error_question_title").innerHTML = "Please Enter a Valid Question Title";
+	return false;
+	}
+	document.getElementById("question_title").classList.remove("is-invalid");
+	document.getElementById("question_title").classList.add("is-valid");
+	document.getElementById("error_question_title").innerHTML = "";
+
+	if (document.getElementById("question_text").value == "") {
+	document.getElementById("question_text").classList.add("is-invalid");
+	document.getElementById("error_question_text").innerHTML = "Please Enter a Valid Question Text";
+	return false;
+	}
+	document.getElementById("question_text").classList.remove("is-invalid");
+	document.getElementById("question_text").classList.add("is-valid");
+	document.getElementById("error_question_text").innerHTML = "";
 
 
 	var question_title = document.getElementById("question_title").value; 
