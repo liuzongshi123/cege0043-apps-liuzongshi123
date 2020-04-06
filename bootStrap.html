@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
 
     <link href="css/sb-admin-2.css" type="text/css" rel="stylesheet">
-
+      
 
     <!-- the following links add the CSS and Javascript required for the Leaflet Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css"
@@ -245,9 +245,12 @@
           <div class="form-group d-flex justify-content-center">
             <h1>Question Creation</h1> </div>
           
-          <div class="form-group d-flex justify-content-center">
-          <label for="question_title" class="control-label">Question Title</label>
-          <div class="col-sm-6"><input type="text" class="form-control" id="question_title">
+          <div class="form-group d-flex justify-content-center has-error has-feedback">
+          <label for="question_title" class="control-label" for="question_title">Question Title</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="question_title">
+            <span id="error_question_title_icon"></span>
+            <span id="error_question_title"></span>
             </div>
           </div>
           

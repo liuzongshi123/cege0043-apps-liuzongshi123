@@ -1,5 +1,11 @@
 function startDataUpload(position) { 
 	alert ("start data upload");
+	if (document.getElementById("question_title").value == "") {
+		document.getElementById("error_question_title_icon").className = "fas fa-times-circle";
+		document.getElementById("error_question_title").innerHTML = "Please enter a valid question_title";
+	};
+
+
 	var question_title = document.getElementById("question_title").value; 
 	var question_text = document.getElementById("question_text").value; 
 	var answer_1 = document.getElementById("answer_1").value; 
