@@ -17,10 +17,7 @@ function checkAnswer(questionID) {
 			questionLayer.setIcon(testMarkerGreen);
 			// now close the popup 
 			mymap.closePopup();
-			// the code to upload the answer to the server would go here 
-			// call an AJAX routine using the data 
-			// the answerSelected variable holds the number of the answer 
-			// that the user picked
+			// upload answer
 			console.log("start answer upload");
 			var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
 			alert (postString);
@@ -28,7 +25,7 @@ function checkAnswer(questionID) {
 		} 
 	}
 	if (answerSelected === 0) { 
-	// they didn't get it right 
+	// they didn't select an answer 
 	alert("Please Select an Answer!!");
 	}
 	else {	
@@ -38,10 +35,7 @@ function checkAnswer(questionID) {
 		questionLayer.setIcon(testMarkerRed);
 	// now close the popup 
 	mymap.closePopup();
-	// the code to upload the answer to the server would go here 
-	// call an AJAX routine using the data 
-	// the answerSelected variable holds the number of the answer 
-	// that the user picked
+	// upload answer
 	console.log("start answer upload");
 	var postString = "port_id="+httpsPortNumberAPI+"&question_id="+questionID+"&answer_selected="+answerSelected+"&correct_answer="+answer;
 	alert (postString);
