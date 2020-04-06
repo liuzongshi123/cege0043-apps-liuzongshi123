@@ -185,14 +185,32 @@
          </li>
 
 
+        <!-- Nav Item - Pages Collapse Menu 10-->
+        <li class="nav-item d-none d-lg-block">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" onclick="alert('menu1');" aria-expanded="true" aria-controls="collapseTen">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Help</span>
+          </a>
+         </li>
+
+
         <!-- Show on the Smaller screen -->
         <!-- Nav Item - Pages Collapse Menu 7-->
         <li class="nav-item d-lg-none" >
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="data-target="" onclick="alert('menu1');" aria-expanded="true" aria-controls="collapseSeven">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
             <i class="fas fa-chart-bar"></i>
             <span>Statistics</span>
           </a>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+             <h6 class="collapse-header">Statistics</h6>
+             <a class="collapse-item" href="#" onclick="alert('menu 9');">Ranking</a>
+             <a class="collapse-item" href="#" onclick="alert('menu 10');">Top Scorers</a>
+             <a class="collapse-item" href="#" onclick="alert('menu 10');">Remove Graph</a>
+            </div>
+           </div>
         </li>
+
 
         <!-- Nav Item - Pages Collapse Menu 8-->
         <li class="nav-item d-lg-none" >
@@ -203,9 +221,8 @@
         </li>
 
 
-        <!-- Show on the Both screen -->
         <!-- Nav Item - Pages Collapse Menu 9-->
-        <li class="nav-item">
+        <li class="nav-item d-lg-none">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="" onclick="alert('menu1');" aria-expanded="true" aria-controls="collapseNine">
             <i class="fas fa-fw fa-cog"></i>
             <span>Help</span>
