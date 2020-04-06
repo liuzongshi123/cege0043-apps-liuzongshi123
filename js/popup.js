@@ -41,6 +41,7 @@ function loadFormData(formData) {
 
 function removeFormData() { 
 	mymap.removeLayer(formLayer);
+	alert("Existing Question Points Have been Removed!")
 }
 
 //Using the Layer for Distance Measurement – Proximity Alert
