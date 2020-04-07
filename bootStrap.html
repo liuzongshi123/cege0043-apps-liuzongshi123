@@ -216,7 +216,7 @@
              <h6 class="collapse-header">Statistics</h6>
              <a class="collapse-item" href="#" onclick="getRanking();">Ranking</a>
              <a class="collapse-item" href="#" onclick="topscorers();">Top Scorers</a>
-             <a class="collapse-item" href="#" onclick="alert('menu 10');">Remove Graph</a>
+             <a class="collapse-item" href="#" onclick="RemoveTopscorers();">Remove Graph</a>
             </div>
            </div>
         </li>
@@ -248,8 +248,6 @@
 
         <!-- the mapContainer div will hold the map -->
         <div id="mapContainer" class="d-flex justify-content-center"></div>
-
-        <svg width="550" height="350"></svg>
         
         <div id="question_creation">
           <form class="form-horizontal" role="form">
@@ -364,7 +362,9 @@
           <div class="form-group d-flex justify-content-center" id='showLocation'>Location will be displayed here</div> 
         </form>
         </div>
-
+        
+        <svg width="550" height="350"></svg>
+        
       </div>
       <!-- End of Main Content -->
     </div>
