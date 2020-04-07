@@ -1,41 +1,96 @@
-<DOCTYPE html>
-  <html lang="en">
-  <head>
-	<script src="https://d3js.org/d3.v5.min.js"></script>
-  	</head>
+<!DOCTYPE html>
+<head>
+<title>D3 Graph</title>
+<!-- example adapted from: https://www.htmlgoodies.com/beyond/javascript/generate-a-bar-chart-with-d3.js.html -->
 
-	  	<style>
-  	.chart div {
-  		font: 10px sans-serif;
-  		background-color: steelblue;
-  		text-align: right;
-  		padding: 3px;
-  		margin: 3px;
-  		color: black;
-  	}
-  </style>
-    <body >
-<div class="chart"></div>
+<!-- make sure you import the D3 script file -->
+<script src="https://d3js.org/d3.v5.min.js"></script> 
+
+<!-- set the style for the bar graph -->
+<style>
+.bar {
+  fill: #71EEB8;
+}
+
+.bar:hover {
+  fill: slateblue;
+}
+
+.axis-x path {
+  display: none;
+}
+
+.axis text {
+  font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+
+<svg width="1000" height="500"></svg>
+
 <script> 
-// adapted from: https://bost.ocks.org/mike/bar/
-// define the data
-var data = [4, 8, 15, 16, 23, 42];
-// select the div
-// note that the following command selects the first div which has class "chart"
-var chart = d3.select(".chart");
-// add the data to the div
-// first create an empty selection for chart
-// then add the data
-var bar = chart.selectAll("div");
-var barUpdate = bar.data(data);
-// create the correct number of nodes using enter()
-var barEnter = barUpdate.enter().append("div");
-// style the nodes - d in this case is the data array
-barEnter.style("width", function(d) { return d * 10 + "px"; });
-// add the text - d is the data array
-barEnter.text(function(d) { return d; });
+const svg     = d3.select("svg"),
+      margin  = {top: 20, right: 20, bottom: 30, left: 50},
+      width   = +svg.attr("width")  - margin.left - margin.right,
+      height  = +svg.attr("height") - margin.top  - margin.bottom,
+      x       = d3.scaleBand().rangeRound([0, width]).padding(0.2),
+      y       = d3.scaleLinear().rangeRound([height, 0]),
+      g       = svg.append("g")
+                   .attr("transform", `translate(${margin.left},${margin.top})`);
 
-</script>
+d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(data => {
+  data = data[0].array_to_json;
+  console.log(data);
+  x.domain(data.map(d => d.port_id));
+  y.domain([0, d3.max(data, d => d.rank)]);
 
-</body >
-</html>
+  g.append("g")
+      .attr("class", "axis axis-x")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x));
+
+
+  g.append("g")
+      .attr("class", "axis axis-y")
+      .call(d3.axisLeft(y).ticks(10).tickSize(8));
+
+  g.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", d => x(d.port_id))
+      .attr("y", d => y(d.rank))
+      .attr("width", x.bandwidth())
+      .attr("height", d => height - y(d.rank));
+})
+.catch(err => {
+  svg.append("text")         
+        .attr("y", 20)
+        .attr("text-anchor", "left")  
+        .style("font-size", "20px") 
+        .style("font-weight", "bold")  
+        .text(`Couldn't open the data file: "${err}".`);
+});
+
+  g.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height/2))
+    .attr("dy", "1em")
+    .style("text-anchor" , "middle")
+    .text("Ranking");
+
+  g.append("text")
+    .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Port id");
+
+
+</script> 
+
+
+
+</body>
