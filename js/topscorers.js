@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<head>
-<title>D3 Graph</title>
-<!-- example adapted from: https://www.htmlgoodies.com/beyond/javascript/generate-a-bar-chart-with-d3.js.html -->
-
-<!-- make sure you import the D3 script file -->
-<script src="https://d3js.org/d3.v5.min.js"></script> 
-
-<!-- set the style for the bar graph -->
-<style>
-.bar {
-  fill: #71EEB8;
-}
-
-.bar:hover {
-  fill: slateblue;
-}
-
-.axis-x path {
-  display: none;
-}
-
-.axis text {
-  font-weight: bold;
-}
-</style>
-
-</head>
-<body>
-
-
-<svg width="1000" height="500"></svg>
-
-<script> 
+function topscorers() {
 const svg     = d3.select("svg"),
       margin  = {top: 20, right: 20, bottom: 30, left: 50},
       width   = +svg.attr("width")  - margin.left - margin.right,
@@ -41,11 +8,11 @@ const svg     = d3.select("svg"),
       g       = svg.append("g")
                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson").then(data => {
-  data = data.features;
+d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(data => {
+  data = data[0].array_to_json;
   console.log(data);
-  x.domain(data.map(d => d.properties.place));
-  y.domain([0, d3.max(data, d => d.properties.mag)]);
+  x.domain(data.map(d => d.port_id));
+  y.domain([0, d3.max(data, d => d.rank)]);
 
   g.append("g")
       .attr("class", "axis axis-x")
@@ -61,10 +28,10 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geoj
     .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", d => x(d.properties.place))
-      .attr("y", d => y(d.properties.mag))
+      .attr("x", d => x(d.port_id))
+      .attr("y", d => y(d.rank))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d.properties.mag));
+      .attr("height", d => height - y(d.rank));
 })
 .catch(err => {
   svg.append("text")         
@@ -75,9 +42,16 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geoj
         .text(`Couldn't open the data file: "${err}".`);
 });
 
+  g.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height/2))
+    .attr("dy", "1em")
+    .style("text-anchor" , "middle")
+    .text("Ranking");
 
-</script> 
-
-
-
-</body>
+  g.append("text")
+    .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
+    .style("text-anchor", "middle")
+    .text("Port id");
+}

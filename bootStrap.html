@@ -28,7 +28,13 @@
     <!-- the following CSS is used to set the size of the Map -->
     <style type="text/css"> #mapContainer { height: 600px; }</style>
 
-    
+    <style>
+    .bar {fill: #71EEB8;}
+    .bar:hover {fill: slateblue;}
+    .axis-x path {display: none;}
+    .axis text {font-weight: bold;}
+    </style>
+
     <!-- the following links incorporate the CSS required for custom icon creation -->
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -56,13 +62,15 @@
 
     <script src="js/checkanswer.js"></script>
 
+    <script src="js/topscorers.js"></script>
+
     <script src="js/trackLocation.js"></script>
 
     <script src="js/utilities.js"></script>
 
     <script src="js/sb-admin-2.js"></script>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script> 
   
 
     <title>Location-Based Quiz App</title>
@@ -240,7 +248,7 @@
         <!-- the mapContainer div will hold the map -->
         <div id="mapContainer" class="d-flex"></div>
         
-
+        <svg width="1000" height="500"></svg>
         
         <div id="question_creation">
           <form class="form-horizontal" role="form">
@@ -377,7 +385,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('modification').style.display = 'none';
   loadMap();
 }, false);
-
 
 </script>
 
