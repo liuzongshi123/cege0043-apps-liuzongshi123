@@ -55,6 +55,13 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(da
     .style("text-anchor", "middle")
     .text("Port id");
 
+  g.append("text")
+    .attr("x", (width/2))
+    .attr("y", 0 - 2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "24px")
+    .text("The Graph of Ranking");
+
     document.getElementById('userlocation').style.display = 'none';
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
     document.getElementById('topscorers').style.display = 'block';
