@@ -35,6 +35,12 @@
     .axis text {font-weight: bold;}
     </style>
 
+    <style>
+      #topscorers{display:none; position:fixed; top:30%; left:30%; width:550px;height:360px;border:1px solid black; background-color: white; z-index:1002;}
+    </style>
+
+
+
     <!-- the following links incorporate the CSS required for custom icon creation -->
     <link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -363,8 +369,8 @@
         </form>
         </div>
         
-        <svg width="550" height="350"></svg>
-        
+        <svg id="topscorers" width="550" height="350"></svg>
+
       </div>
       <!-- End of Main Content -->
     </div>

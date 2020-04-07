@@ -57,13 +57,13 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(da
 
     document.getElementById('userlocation').style.display = 'none';
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
-    d3.select("svg").style("display", "block");
+    document.getElementById('topscorers').style.display = 'block';
 }
 
 
 function RemoveTopscorers() {
   document.getElementById('userlocation').style.display = 'block';
   document.getElementById("mymap").innerHTML = "#mapContainer { height: 600px; }";
-  d3.select("svg").style("display", "none");
+  document.getElementById('topscorers').style.display = 'none';
 }
 
