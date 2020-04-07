@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<title>D3 Graph</title>
+<!-- example adapted from: https://www.htmlgoodies.com/beyond/javascript/generate-a-bar-chart-with-d3.js.html -->
+
+<!-- make sure you import the D3 script file -->
+<script src="https://d3js.org/d3.v5.min.js"></script> 
+
+<!-- set the style for the bar graph -->
+<style>
+
+.bar:hover {fill: slateblue;}
+.axis-x path {display: none;}
+.axis text {font-weight: bold;}
+</style>
+
+</head>
+<body>
+
+
+<svg width="800" height="500"></svg>
+
+<script> 
+const svg     = d3.select("svg"),
+      margin  = {top: 20, right: 20, bottom: 30, left: 50},
+      width   = +svg.attr("width")  - margin.left - margin.right,
+      height  = +svg.attr("height") - margin.top  - margin.bottom,
+      x       = d3.scaleBand().rangeRound([0, width]).padding(0.2),
+      y       = d3.scaleLinear().rangeRound([height, 0]),
+      g       = svg.append("g")
+                   .attr("transform", `translate(${margin.left},${margin.top})`);
+
+d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/all").then(data => {
+  data = data[0].array_to_json;
+  console.log(data);
+  x.domain(data.map(d => d.day));
+  y.domain([0, d3.max(data, d => d.questions_answered)]);
+
+  g.append("g")
+      .attr("class", "axis axis-x")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisBottom(x));
+
+
+  g.append("g")
+      .attr("class", "axis axis-y")
+      .call(d3.axisLeft(y).ticks(10).tickSize(8));
+
+
+  g.selectAll(".bar")
+    .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", d => x(d.day))
+      .attr("y", d => y(d.questions_answered))
+      .attr("width", x.bandwidth()/2)
+      .attr("height", d => height - y(d.questions_answered))
+      .attr("fill", "#566fde");
+
+
+    g.selectAll(".rect")
+    .data(data)
+    .enter().append("rect")
+      .attr("class", "bar")
+      .attr("x", d => x(d.day) + x.bandwidth()/2)
+      .attr("y", d => y(d.questions_correct))
+      .attr("width", x.bandwidth()/2)
+      .attr("height", d => height - y(d.questions_correct))
+      .attr("fill", "#CB7730");
+
+})
+.catch(err => {
+  svg.append("text")         
+        .attr("y", 20)
+        .attr("text-anchor", "left")  
+        .style("font-size", "20px") 
+        .style("font-weight", "bold")  
+        .text(`Couldn't open the data file: "${err}".`);
+});
+    
+  g.append('g')
+    .attr('transform', 'translate(0,50)')
+    .append('rect')
+    .attr('width', '20px')
+    .attr('height', '20px')
+    .attr('fill', '#2C81F3');
+
+  g.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height/2))
+    .attr("dy", "1em")
+    .style("text-anchor" , "middle")
+    .text("Number");
+
+  g.append("text")
+    .attr("transform", "translate(" + (width/2 + 65) + "," + (height + margin.bottom - 3) + ")")
+    .style("text-anchor", "middle")
+    .text("Day");
+
+  g.append("text")
+    .attr("x", (width/2))
+    .attr("y", 0 - 2)
+    .attr("text-anchor", "middle")
+    .style("font-size", "24px")
+    .text("The Number Participation Rates for The Past Week (All Users)");
+
+
+</script> 
+
+
+
+</body>
