@@ -54,4 +54,8 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(da
     .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
     .style("text-anchor", "middle")
     .text("Port id");
+
+    document.getElementById('userlocation').style.display = 'none';
+    document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }"
+
 }

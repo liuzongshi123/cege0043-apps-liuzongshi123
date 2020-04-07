@@ -22,6 +22,7 @@ if($(window).width() <= 991) {
     getFormData();
   };
 
+
 }; //end code to add the leaflet map
 
 
