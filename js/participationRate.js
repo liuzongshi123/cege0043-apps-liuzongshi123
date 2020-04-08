@@ -1,5 +1,5 @@
 function participationRateAll() {
-const svg     = d3.select("svg"),
+const svg     = d3.select("#participationRateAll"),
       margin  = {top: 20, right: 20, bottom: 30, left: 50},
       width   = +svg.attr("width")  - margin.left - margin.right,
       height  = +svg.attr("height") - margin.top  - margin.bottom,
@@ -121,12 +121,13 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
 
     StopCreation();
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
+    document.getElementById('participationRateMy').style.display = 'none';
     document.getElementById('participationRateAll').style.display = 'block';
 }
 
 
 function participationRateMy() {
-  const svg     = d3.select("svg"),
+  const svg     = d3.select("#participationRateMy"),
       margin  = {top: 20, right: 20, bottom: 30, left: 50},
       width   = +svg.attr("width")  - margin.left - margin.right,
       height  = +svg.attr("height") - margin.top  - margin.bottom,
@@ -248,6 +249,6 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my
 
     StopCreation();
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
-    document.getElementById('participationRateMy').style.display = 'none';
-    document.getElementById('participationRateAll').style.display = 'block';
+    document.getElementById('participationRateAll').style.display = 'none';
+    document.getElementById('participationRateMy').style.display = 'block';
 }
