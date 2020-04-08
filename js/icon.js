@@ -22,3 +22,8 @@ var testMarkerGreen = L.AwesomeMarkers.icon({
     	icon: 'play',
     	markerColor: 'green'
     });
+
+var testMarkerDarkblue = L.AwesomeMarkers.icon({
+    	icon: 'play',
+    	markerColor: 'darkblue'
+    });

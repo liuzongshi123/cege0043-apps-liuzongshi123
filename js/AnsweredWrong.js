@@ -1,16 +1,18 @@
-function getLastFiveQuestionsAnsewred() {
+function getAnsweredWrong() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/LastFiveQuestionsAnsewred",
+	"/AnsweredWrong",
 		crossDomain: true,
-		success: function(result){
-		loadLastFiveQuestionsAnsewred(result);
+		success: function(result){	
+		loadAnsweredWrong(result);
 	}}); //end of the AJAX call
-} // end of getLastFiveQuestionsAnsewred
+} // end of getQuestionLastWeek
 
-var LastFiveQuestionsAnsewredLayer; 
-function loadLastFiveQuestionsAnsewred(formData) { 
+
+var AnsweredWrongLayer; 
+function loadAnsweredWrong(formData) { 
+
 	// load the geoJSON layer
-	LastFiveQuestionsAnsewredLayer = L.geoJson(formData,
+	AnsweredWrongLayer = L.geoJson(formData,
 		{
 			// use point to layer to create the points 
 			pointToLayer: function (feature, latlng)
@@ -28,22 +30,19 @@ function loadLastFiveQuestionsAnsewred(formData) {
 			// for the assignment this will of course vary - you can use feature.properties.correct_answer
 			htmlString = htmlString + "<div id=answer" + feature.properties.id + " hidden>" + feature.properties.correct_answer + "</div>";
 			htmlString = htmlString + "</div>";
-			if (feature.properties.answer_correct === true) {
-				return L.marker(latlng,{icon:testMarkerGreen}).bindPopup(htmlString);
-			};
-			if (feature.properties.answer_correct === false) {
-				return L.marker(latlng,{icon:testMarkerRed}).bindPopup(htmlString);
-			};
+			return L.marker(latlng,{icon:testMarkerDarkblue}).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
+	AnsweredWrongLayer.eachLayer(function(layer) {
+			layer.openPopup();
+	});
 	mymap.removeLayer(formLayer);
-	mymap.fitBounds(LastFiveQuestionsAnsewredLayer.getBounds());
-	alert("Last Five Answered Questions Have been Loaded!");
+	mymap.fitBounds(AnsweredWrongLayer.getBounds());
+	alert("Questions Have been Loaded!");
 }
 
-function RemoveLastFiveQuestionsAnsewred() { 
+function RemoveAnsweredWrong() { 
 	formLayer.addTo(mymap);
-	mymap.removeLayer(LastFiveQuestionsAnsewredLayer);
-	alert("Last Five Answered Questions Have been Removed!");
+	mymap.removeLayer(AnsweredWrongLayer);
+	alert("Questions Have been Removed!");
 }
-
