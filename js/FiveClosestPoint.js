@@ -1,6 +1,8 @@
 function LoadUserLocation() { 
 	navigator.geolocation.getCurrentPosition(GetFiveClosestPoint);
 } 
+
+
 var UserPositionLayer;
 function GetFiveClosestPoint(position) { 
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/FiveClosestPoint"
