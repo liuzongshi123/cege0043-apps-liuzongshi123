@@ -70,12 +70,6 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .attr('height', '15px')
     .attr('fill', '#CB7730');
 
-  g.append('g')
-    .attr('transform', "translate(600, 40)")
-    .append('rect')
-    .attr('width', '15px')
-    .attr('height', '15px')
-    .attr('fill', '#CB7730');
 
   g.append("text")
     .attr("y", 20)
@@ -182,13 +176,6 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my
     .attr('width', '15px')
     .attr('height', '15px')
     .attr('fill', '#566fde');
-
-  g.append('g')
-    .attr('transform', "translate(600, 40)")
-    .append('rect')
-    .attr('width', '15px')
-    .attr('height', '15px')
-    .attr('fill', '#CB7730');
 
   g.append('g')
     .attr('transform', "translate(600, 40)")
