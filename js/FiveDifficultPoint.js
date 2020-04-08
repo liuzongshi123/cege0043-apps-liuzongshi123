@@ -26,10 +26,14 @@ function loadFiveDifficultPoint(result) {
 
 	document.getElementById('FiveDifficultPoint').innerHTML = QuestionString;
 	document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
+	document.getElementById('participationRateAll').style.display = 'none';
+  	document.getElementById('participationRateMy').style.display = 'none';
 	document.getElementById('FiveDifficultPoint').style.display = 'block';
 }
 
 function RemoveFiveDifficultPoint() {
 	document.getElementById('FiveDifficultPoint').style.display = 'none';
 	document.getElementById("mymap").innerHTML = "#mapContainer { height: 600px; }";
+	document.getElementById('participationRateAll').style.display = 'none';
+  	document.getElementById('participationRateMy').style.display = 'none';
 }
