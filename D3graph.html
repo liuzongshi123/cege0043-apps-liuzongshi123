@@ -30,7 +30,7 @@ const svg     = d3.select("svg"),
       g       = svg.append("g")
                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/all").then(data => {
+d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my").then(data => {
   data = data[0].array_to_json;
   console.log(data);
   x.domain(data.map(d => d.day));
@@ -130,7 +130,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .text("Number");
 
   g.append("text")
-    .attr("transform", "translate(" + (width/2 + 65) + "," + (height + margin.bottom - 3) + ")")
+    .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
     .style("text-anchor", "middle")
     .text("Day");
 
@@ -139,7 +139,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .attr("y", 0 - 2)
     .attr("text-anchor", "middle")
     .style("font-size", "24px")
-    .text("The Number Participation Rates for The Past Week (All Users)");
+    .text("The Number Participation Rates for The Past Week (Only You)");
 
 
 </script> 
