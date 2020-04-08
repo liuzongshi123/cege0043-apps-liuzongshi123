@@ -79,11 +79,47 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
 });
     
   g.append('g')
-    .attr('transform', 'translate(0,50)')
+    .attr('transform', "translate(600, 10)")
     .append('rect')
-    .attr('width', '20px')
-    .attr('height', '20px')
-    .attr('fill', '#2C81F3');
+    .attr('width', '15px')
+    .attr('height', '15px')
+    .attr('fill', '#566fde');
+
+  g.append('g')
+    .attr('transform', "translate(600, 40)")
+    .append('rect')
+    .attr('width', '15px')
+    .attr('height', '15px')
+    .attr('fill', '#CB7730');
+
+  g.append('g')
+    .attr('transform', "translate(600, 40)")
+    .append('rect')
+    .attr('width', '15px')
+    .attr('height', '15px')
+    .attr('fill', '#CB7730');
+
+  g.append("text")
+    .attr("y", 20)
+    .attr("x", 620)
+    .style("text-anchor" , "right")
+    .style("font-size", "12px")
+    .text("Question Answered");
+
+  g.append("text")
+    .attr("y", 50)
+    .attr("x", 620)
+    .style("text-anchor" , "right")
+    .style("font-size", "12px")
+    .text("Answered Correctly");
+
+  g.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height/2))
+    .attr("dy", "1em")
+    .style("text-anchor" , "middle")
+    .text("Number");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
