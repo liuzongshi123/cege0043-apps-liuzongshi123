@@ -1,22 +1,24 @@
 function LoadUserLocation() { 
 	navigator.geolocation.getCurrentPosition(GetFiveClosestPoint);
 } 
-
+var UserPositionLayer;
 function GetFiveClosestPoint(position) { 
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/FiveClosestPoint"
 	var postString = "latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
+	UserPositionLayer = L.marker([position.coords.latitude,position.coords.longitude],
+			{icon:testMarkerPink}).addTo(mymap).bindPopup("Here is Your Position");
 	$.ajax({ 
 		url: serviceUrl, 
 		crossDomain: true, 
+		type: "POST", 
 		success: function(data){console.log(data); loadFiveClosestPoint(data);}, 
 		data: postString 
 	}); 
 }
 
 var FiveClosestPointLayer; 
-function loadFiveClosestPoint(formData) { 
-	// convert the text received from the server to JSON 
 
+function loadFiveClosestPoint(formData) {
 
 	// load the geoJSON layer
 	FiveClosestPointLayer = L.geoJson(formData,
@@ -37,14 +39,15 @@ function loadFiveClosestPoint(formData) {
 			// for the assignment this will of course vary - you can use feature.properties.correct_answer
 			htmlString = htmlString + "<div id=answer" + feature.properties.id + " hidden>" + feature.properties.correct_answer + "</div>";
 			htmlString = htmlString + "</div>";
-			return L.marker(latlng,{icon:testMarkerWhite}).bindPopup(htmlString);
+			return L.marker(latlng,{icon:testMarkerBlack}).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
 	mymap.fitBounds(FiveClosestPointLayer.getBounds());
-	alert("Question Added in Last Week Have been Loaded!");
+	alert("Five Closest Points Have been Loaded!");
 }
 
 function RemoveQuestionLastWeek() { 
 	mymap.removeLayer(FiveClosestPointLayer);
-	alert("Question Added in Last Week Have been Removed!");
+	mymap.removeLayer(UserPositionLayer);
+	alert("Five Closest Points Have been Removed!");
 }
