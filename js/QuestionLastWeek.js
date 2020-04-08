@@ -35,11 +35,11 @@ function loadQuestionLastWeek(formData) {
 			return L.marker(latlng,{icon:testMarkerWhite}).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
-	mymap.fitBounds(formLayer.getBounds());
-	alert("Question Added in Last Week Have been Loaded!")
+	mymap.fitBounds(QuestionLastWeekLayer.getBounds());
+	alert("Question Added in Last Week Have been Loaded!");
 }
 
 function RemoveQuestionLastWeek() { 
 	mymap.removeLayer(QuestionLastWeekLayer);
-	alert("Question Added in Last Week Have been Removed!")
+	alert("Question Added in Last Week Have been Removed!");
 }
