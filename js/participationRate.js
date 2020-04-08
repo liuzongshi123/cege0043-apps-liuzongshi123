@@ -100,14 +100,6 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .text("Number");
 
   g.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left)
-    .attr("x", 0 - (height/2))
-    .attr("dy", "1em")
-    .style("text-anchor" , "middle")
-    .text("Number");
-
-  g.append("text")
     .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
     .style("text-anchor", "middle")
     .text("Day");
@@ -218,14 +210,6 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my
     .style("text-anchor" , "right")
     .style("font-size", "12px")
     .text("Answered Correctly");
-
-  g.append("text")
-    .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left)
-    .attr("x", 0 - (height/2))
-    .attr("dy", "1em")
-    .style("text-anchor" , "middle")
-    .text("Number");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
