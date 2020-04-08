@@ -6,7 +6,7 @@ function GetFiveClosestPoint(position) {
 	var serviceUrl= "https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI+"/FiveClosestPoint"
 	var postString = "latitude=" + position.coords.latitude + "&longitude=" + position.coords.longitude;
 	UserPositionLayer = L.marker([position.coords.latitude,position.coords.longitude],
-			{icon:testMarkerPink}).addTo(mymap).bindPopup("Here is Your Position");
+			{icon:testMarkerPink}).bindPopup("Here is Your Position");
 	$.ajax({ 
 		url: serviceUrl, 
 		crossDomain: true, 
@@ -42,11 +42,12 @@ function loadFiveClosestPoint(formData) {
 			return L.marker(latlng,{icon:testMarkerBlack}).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
+	UserPositionLayer.addTo(mymap).openPopup();
 	mymap.fitBounds(FiveClosestPointLayer.getBounds());
 	alert("Five Closest Points Have been Loaded!");
 }
 
-function RemoveQuestionLastWeek() { 
+function RemoveFiveClosestPoint() { 
 	mymap.removeLayer(FiveClosestPointLayer);
 	mymap.removeLayer(UserPositionLayer);
 	alert("Five Closest Points Have been Removed!");
