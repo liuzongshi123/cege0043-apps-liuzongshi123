@@ -86,6 +86,8 @@
 
     <script src="js/trackLocation.js"></script>
 
+    <script src="js/LastFiveQuestionsAnsewred.js"></script>
+
     <script src="js/utilities.js"></script>
 
     <script src="js/sb-admin-2.js"></script>
@@ -237,6 +239,21 @@
              <a class="collapse-item" href="#" onclick="getRanking();">Ranking</a>
              <a class="collapse-item" href="#" onclick="topscorers();">Top Scorers</a>
              <a class="collapse-item" href="#" onclick="RemoveTopscorers();">Remove Graph</a>
+            </div>
+           </div>
+        </li>
+        
+        <!-- Nav Item - Pages Collapse Menu 11-->
+        <li class="nav-item d-lg-none" >
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+            <i class="fas fa-user-check"></i>
+            <span>Answered Questions</span>
+          </a>
+          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+             <h6 class="collapse-header">Answered Questions</h6>
+             <a class="collapse-item" href="#" onclick="getLastFiveQuestionsAnsewred();">Load Questions</a>
+             <a class="collapse-item" href="#" onclick="RemoveLastFiveQuestionsAnsewred();">Remove Question</a>
             </div>
            </div>
         </li>

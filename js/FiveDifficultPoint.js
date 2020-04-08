@@ -3,7 +3,6 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	"/FiveDifficultPoint",
 		crossDomain: true,
 		success: function(result){
-		console.log(result);	
 		loadFiveDifficultPoint(result);
 	}}); //end of the AJAX call
 } // end of getFiveDifficultPoint
