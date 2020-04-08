@@ -108,7 +108,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .text("Number");
 
   g.append("text")
-    .attr("transform", "translate(" + (width) + "," + (height + margin.bottom) + ")")
+    .attr("transform", "translate(" + (width/2) + "," + (height + margin.bottom) + ")")
     .style("text-anchor", "middle")
     .text("Day");
 
@@ -251,4 +251,11 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
     document.getElementById('participationRateAll').style.display = 'none';
     document.getElementById('participationRateMy').style.display = 'block';
+}
+
+function RemoveparticipationRate() {
+  document.getElementById("mymap").innerHTML = "#mapContainer { height: 600px; }";
+  document.getElementById('participationRateAll').style.display = 'none';
+  document.getElementById('participationRateMy').style.display = 'none';
+
 }
