@@ -10,6 +10,7 @@ $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 var LastFiveQuestionsAnsewredLayer; 
 function loadLastFiveQuestionsAnsewred(formData) { 
 	// load the geoJSON layer
+	formData[0].features.reverse();
 	LastFiveQuestionsAnsewredLayer = L.geoJson(formData,
 		{
 			// use point to layer to create the points 
