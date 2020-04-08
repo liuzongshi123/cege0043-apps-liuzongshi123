@@ -1,4 +1,4 @@
-var questionLayer;
+
 function checkAnswer(questionID) {
 	// get the answer from the hidden div 
 	// NB - do this BEFORE you close the pop-up as when you close the pop-up the DIV is destroyed
@@ -14,7 +14,11 @@ function checkAnswer(questionID) {
 		if ((document.getElementById(questionID+"_"+i).checked) && (i == answer)) { 
 			alert ("Well done"); 
 			correctAnswer = true;
-			questionLayer.setIcon(testMarkerGreen);
+			formLayer.eachLayer(function(layer) {
+				if (layer.feature.properties.id == questionID){
+					layer.setIcon(testMarkerGreen);
+					}
+			});
 			// now close the popup 
 			mymap.closePopup();
 			// upload answer
@@ -31,7 +35,11 @@ function checkAnswer(questionID) {
 		if (correctAnswer === false) { 
 		// they didn't get it right 
 		alert("Better luck next time"); 
-		questionLayer.setIcon(testMarkerRed);
+		formLayer.eachLayer(function(layer) {
+			if (layer.feature.properties.id == questionID){
+				layer.setIcon(testMarkerRed);
+			}
+		});
 	// now close the popup 
 	mymap.closePopup();
 	// upload answer

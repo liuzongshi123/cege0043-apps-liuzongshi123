@@ -36,7 +36,7 @@ function loadFormData(formData) {
 			return L.marker(latlng).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
-	alert("Existing Question Points Have been Loaded!")
+	alert("Existing Question Points Have been Loaded!");
 	mymap.fitBounds(formLayer.getBounds());
 }
 
@@ -72,7 +72,6 @@ function closestFormPoint(position) {
 	// show the popup for the closest point
 	formLayer.eachLayer(function(layer) {
 		if (layer.feature.properties.id == closestFormPoint){
-			questionLayer = layer;
 			layer.openPopup();
 		}
 	});
