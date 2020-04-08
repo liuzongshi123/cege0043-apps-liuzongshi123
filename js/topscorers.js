@@ -31,7 +31,8 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(da
       .attr("x", d => x(d.port_id))
       .attr("y", d => y(d.rank))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d.rank));
+      .attr("height", d => height - y(d.rank))
+      .attr("fill", "#71EEB8");
 })
 .catch(err => {
   svg.append("text")         
