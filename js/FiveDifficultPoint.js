@@ -16,7 +16,7 @@ function loadFiveDifficultPoint(result) {
 		var feature = result[0].array_to_json[i];
 			QuestionString = QuestionString +"<div class='form-group d-flex justify-content-center' id='popup'"+ feature.id + "><h4> Question "+ feature.id + " { " + feature.question_title + " }</h4></div>";
 			QuestionString = QuestionString + "<div class='form-group d-flex justify-content-center'><h5>"+feature.question_text + "</h5></div>";
-			QuestionString = QuestionString + "<div class='form-group d-flex justify-content-center'><div class='col-sm-6 d-flex justify-content-around'>";
+			QuestionString = QuestionString + "<div class='form-group d-flex justify-content-center'><div class='col-sm-10 d-flex justify-content-around'>";
 			QuestionString = QuestionString + "<label class='radio-inline'><input type='radio' name='answer' id ='"+feature.id+"_1'/>"+feature.answer_1+ "</label>";
 			QuestionString = QuestionString + "<label class='radio-inline'><input type='radio' name='answer' id ='"+feature.id+"_2'/>"+feature.answer_2+ "</label>";
 			QuestionString = QuestionString + "<label class='radio-inline'><input type='radio' name='answer' id ='"+feature.id+"_3'/>"+feature.answer_3+ "</label>";
