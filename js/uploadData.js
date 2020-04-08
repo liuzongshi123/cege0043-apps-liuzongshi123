@@ -1,13 +1,3 @@
-var status = true;
-function checkDataUpload() {
-
-}
-
-
-
-
-
-
 function startDataUpload(position) { 
 	alert ("start data upload");
 

@@ -36,6 +36,7 @@ function loadFormData(formData) {
 			return L.marker(latlng).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
+	alert("Existing Question Points Have been Loaded!")
 	mymap.fitBounds(formLayer.getBounds());
 }
 
