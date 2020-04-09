@@ -19,6 +19,11 @@ function checkAnswer(questionID) {
 					layer.setIcon(testMarkerGreen);
 					}
 			});
+			AnsweredWrongLayer.eachLayer(function(layer) {
+				if (layer.feature.properties.id == questionID){
+					layer.setIcon(testMarkerGreen);
+					}
+			});
 			// now close the popup 
 			mymap.closePopup();
 			// upload answer
@@ -36,6 +41,11 @@ function checkAnswer(questionID) {
 		// they didn't get it right 
 		alert("Better luck next time"); 
 		formLayer.eachLayer(function(layer) {
+			if (layer.feature.properties.id == questionID){
+				layer.setIcon(testMarkerRed);
+			}
+		});
+		AnsweredWrongLayer.eachLayer(function(layer) {
 			if (layer.feature.properties.id == questionID){
 				layer.setIcon(testMarkerRed);
 			}
