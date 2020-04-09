@@ -15,14 +15,91 @@
     <!-- load Referenced Script --> 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-     <title>Location-Based Quiz App</title>
+     <title>Help for Question Setting App</title>
     <!-- adapted from: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ -->
-
-
+	
   </head>
 
 <body>
 	<h1 class = "d-flex justify-content-center">Help for Question Setting App</h1>
-	<div>Warning: All menus are supposed to be clicked once a time, otherwise, the app will go wrong. If you click, the app doesn't go as excepted, please wait for a second because the app sometimes loads slowly.</div>
+
+	<p style="font-size:24px" class="text-justify">This page is a brief introduction of Question Setting App which can provide a guidance for you to use this app correctly.</p>
+
+	<p style="font-size:24px" class="text-justify">(<strong>Important!:</strong> The programmer has tried his best to debug this app and provide serval error handing to prevent app crash or different functions overlay with each other. However, it still not a perfect app. You can use this app in the way you liked, but the programmer suggests you close the function you are using before you start the other one!)</p>
+
+	<p style="font-size:24px" class="text-justify">When you load the question setting app, an interactive map would be loaded and zoom to your current location.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/beginning_page.png" width="1000" height="500"></p>
+
+	<h2 class = "d-flex justify-content-center">[Creation Questions] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Start Creation</strong>" in "<strong>Creation Questions</strong> function to decide the latitude and longitude you want to locate your question. After you decide the location, you can click the button "<strong>Create Question Here</strong>" to load the question form.</p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/create_question.png" width="1000" height="500"></p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/question_form.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">Please fill all part of the form before submit the creation, otherwise, the question would not been created and error messages would appear, like the image below.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/question_form2.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">After you have finished the form correctly, you can click the button "<strong>Create Question</strong>" to upload the question to database. The input box would let you know if you finished all the form correctly and a message would appear to tell you the upload begins. The results of upload are shown above the button.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/question_form3.png" width="1000" height="500"></p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/question_form4.png" width="600" height="120"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Delete Creation</strong> in "<strong>Creation Questions</strong>" function to delete the question or answer in the database if you know the ID. Same as function above, an error messages would appear if you enter invalid ID and The input box would let you know if you enter the ID correctly. The results of delete are shown below the input box.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/delete_question.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Stop Creation</strong> in "<strong>Creation Questions</strong>" function to remove the question form or delete form.</p>
+	
+	<h2 class = "d-flex justify-content-center">[Existing Points] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Points</strong>" in "<strong>Existing Points</strong> function to load the existing question points created by current user and default points. You can also click the point to see the question.</p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/existing_points.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Existing Points</strong>" in "<strong>Existing Points</strong> function to remove the existing question points.</p>
+
+	<h2 class = "d-flex justify-content-center">[Closest 5 Points] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Points</strong>" in "<strong>Closest 5 Points</strong> function to load the closest five points to your current location created by all users. Closest points shown in the black, your location shown in the pink. You can also click the point to see the question.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/closest_points.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Points</strong>" in "<strong>Closest 5 Points</strong> function to remove the closest five points.</p>
+
+	<h2 class = "d-flex justify-content-center">[Difficult 5 Questions] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Question</strong>" in "<strong>Difficult 5 Questions</strong> function to load the most difficult five questions created by any user where most wrong answers were given. If the number of questions is less than five, it means there are less than five questions that users have answered wrong in all.</p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/difficult_question.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Questions</strong>" in "<strong>Difficult 5 Questions</strong> function to remove the questions and reload the interactive map.</p>
+
+	<h2 class = "d-flex justify-content-center">[Added Questions] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Question</strong>" in "<strong>Added Questions</strong> function to load the points added in the last week by any user. You can also click the point to see the question.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/Added Questions.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Questions</strong>" in "<strong>Added Questions</strong> function to remove the questions.</p>
+
+	<h2 class = "d-flex justify-content-center">[Participation Rates] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>All User Rate</strong>" in "<strong>Participation Rates</strong> function to load the graph which shown the participation rates for all user in last week.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/participation_rate.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>My Rate</strong>" in "<strong>Participation Rates</strong> function to load the graph which shown the participation rates for current user in last week.</p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_question/participation_rate2.png" width="1000" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Graph</strong>" in "<strong>Participation Rates</strong> function to remove the graph</p>
+	
+	<p style="font-size:24px" class="text-justify">(<strong>Note:</strong> If app crash when you are using, you can try to refresh the page to fix it!)</p>
+
 </body>
 </html>

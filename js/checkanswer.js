@@ -19,11 +19,13 @@ function checkAnswer(questionID) {
 					layer.setIcon(testMarkerGreen);
 					}
 			});
-			AnsweredWrongLayer.eachLayer(function(layer) {
+			if (AnsweredWrongLayer!==undefined) {
+				AnsweredWrongLayer.eachLayer(function(layer) {
 				if (layer.feature.properties.id == questionID){
 					layer.setIcon(testMarkerGreen);
 					}
 			});
+			};
 			// now close the popup 
 			mymap.closePopup();
 			// upload answer
@@ -45,11 +47,14 @@ function checkAnswer(questionID) {
 				layer.setIcon(testMarkerRed);
 			}
 		});
+		if (AnsweredWrongLayer!==undefined) {
 		AnsweredWrongLayer.eachLayer(function(layer) {
 			if (layer.feature.properties.id == questionID){
 				layer.setIcon(testMarkerRed);
 			}
 		});
+			};		
+
 	// now close the popup 
 	mymap.closePopup();
 	// upload answer
