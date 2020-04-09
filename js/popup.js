@@ -45,6 +45,7 @@ function removeFormData() {
 	alert("Existing Question Points Have been Removed!")
 }
 
+var closestFormPointLayer;
 //Using the Layer for Distance Measurement – Proximity Alert
 function closestFormPoint(position) {
 	// take the leaflet formdata layer 
@@ -72,6 +73,7 @@ function closestFormPoint(position) {
 	// show the popup for the closest point
 	formLayer.eachLayer(function(layer) {
 		if (layer.feature.properties.id == closestFormPoint){
+			closestFormPointLayer = layer;
 			layer.openPopup();
 		}
 	});

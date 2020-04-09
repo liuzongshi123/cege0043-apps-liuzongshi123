@@ -25,6 +25,8 @@ function loadAnsweredWrong(formData) {
 			htmlString = htmlString + "<input type='radio' name='answer' id ='"+feature.properties.id+"_2'/>"+feature.properties.answer_2+"<br>";
 			htmlString = htmlString + "<input type='radio' name='answer' id ='"+feature.properties.id+"_3'/>"+feature.properties.answer_3+"<br>";
 			htmlString = htmlString + "<input type='radio' name='answer' id ='"+feature.properties.id+"_4'/>"+feature.properties.answer_4+"<br>";
+			htmlString = htmlString + "<button onclick='checkAnswer(" + feature.properties.id + ");return false;'>Submit Answer</button>";
+			// now include a hidden element with the answer 
 			// now include a hidden element with the answer 
 			// in this case the answer is alwasy the first choice 
 			// for the assignment this will of course vary - you can use feature.properties.correct_answer
@@ -34,7 +36,9 @@ function loadAnsweredWrong(formData) {
 			},
 		}).addTo(mymap);
 	AnsweredWrongLayer.eachLayer(function(layer) {
+			if (layer.feature.properties.id == closestFormPointLayer.feature.properties.id){
 			layer.openPopup();
+		}
 	});
 	mymap.removeLayer(formLayer);
 	mymap.fitBounds(AnsweredWrongLayer.getBounds());
