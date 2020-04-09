@@ -35,19 +35,49 @@ function loadAnsweredWrong(formData) {
 			return L.marker(latlng,{icon:testMarkerDarkblue}).bindPopup(htmlString);
 			},
 		}).addTo(mymap);
-	AnsweredWrongLayer.eachLayer(function(layer) {
-			if (layer.feature.properties.id == closestFormPointLayer.feature.properties.id){
-			layer.openPopup();
-		}
-	});
 	mymap.removeLayer(formLayer);
-	mymap.removeLayer(LastFiveQuestionsAnsewredLayer);
+	if (LastFiveQuestionsAnsewredLayer !== undefined) {
+		mymap.removeLayer(LastFiveQuestionsAnsewredLayer);
+	}
+	navigator.geolocation.getCurrentPosition(closestWrongPoint);
 	mymap.fitBounds(AnsweredWrongLayer.getBounds());
 	alert("Questions Have been Loaded!");
 }
 
+
 function RemoveAnsweredWrong() { 
-	formLayer.addTo(mymap);
 	mymap.removeLayer(AnsweredWrongLayer);
+	formLayer.addTo(mymap);
 	alert("Questions Have been Removed!");
+}
+
+function closestWrongPoint(position) {
+	// take the leaflet formdata layer 
+	// go through each point one by one 
+	// and measure the distance to Warren Street 
+	// for the closest point show the pop up of that point
+	var minDistance = 100000000000; 
+	var closestFormPoint = 0;
+
+	// for this example, use the latitude/longitude of warren street 
+	// in your assignment replace this with the user's location
+	var userlat = position.coords.latitude; 
+	var userlng = position.coords.longitude;
+	AnsweredWrongLayer.eachLayer(function(layer) {
+		var distance = calculateDistance(userlat,userlng,layer.getLatLng().lat, layer.getLatLng().lng, 'K');
+		if (distance < minDistance){
+			minDistance = distance;
+			closestFormPoint = layer.feature.properties.id;
+		}
+	});
+
+	// for this to be a proximity alert, the minDistance must be 
+	// closer than a given distance - you can check that here 
+	// using an if statement 
+	// show the popup for the closest point
+	AnsweredWrongLayer.eachLayer(function(layer) {
+		if (layer.feature.properties.id == closestFormPoint){
+			layer.openPopup();
+		}
+	});
 }

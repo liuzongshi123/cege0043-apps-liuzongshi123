@@ -38,14 +38,17 @@ function loadLastFiveQuestionsAnsewred(formData) {
 			},
 		}).addTo(mymap);
 	mymap.removeLayer(formLayer);
-	mymap.removeLayer(AnsweredWrongLayer);
+	if (AnsweredWrongLayer !== undefined) {
+		mymap.removeLayer(AnsweredWrongLayer);
+	}
 	mymap.fitBounds(LastFiveQuestionsAnsewredLayer.getBounds());
 	alert("Last Five Answered Questions Have been Loaded!");
 }
 
+
 function RemoveLastFiveQuestionsAnsewred() { 
-	formLayer.addTo(mymap);
 	mymap.removeLayer(LastFiveQuestionsAnsewredLayer);
+	formLayer.addTo(mymap);
 	alert("Last Five Answered Questions Have been Removed!");
 }
 

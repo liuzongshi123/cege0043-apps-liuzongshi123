@@ -1,10 +1,9 @@
 var trackLocationLayer = []; // create an array to store all the location tracking points
-var geoLocationID; // store the ID of the location tracker so that it can be used to switch the location tracking off
 
 function trackLocation() { 
 	if (navigator.geolocation) {
-		geoLocationID = navigator.geolocation.watchPosition(showPosition);
-		geoLocationID = navigator.geolocation.watchPosition(closestFormPoint);  //Call show position function
+		navigator.geolocation.watchPosition(showPosition);  //Call show position function
+		navigator.geolocation.watchPosition(closestFormPoint);
 	} else { 
 		document.getElementById('showLocation').innerHTML = "Geolocation is not supported by this browser."; 
 	} 
