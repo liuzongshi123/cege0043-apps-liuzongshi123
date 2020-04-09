@@ -41,6 +41,7 @@ function loadAnsweredWrong(formData) {
 		}
 	});
 	mymap.removeLayer(formLayer);
+	mymap.removeLayer(LastFiveQuestionsAnsewredLayer);
 	mymap.fitBounds(AnsweredWrongLayer.getBounds());
 	alert("Questions Have been Loaded!");
 }

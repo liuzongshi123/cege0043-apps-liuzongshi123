@@ -38,6 +38,7 @@ function loadLastFiveQuestionsAnsewred(formData) {
 			},
 		}).addTo(mymap);
 	mymap.removeLayer(formLayer);
+	mymap.removeLayer(AnsweredWrongLayer);
 	mymap.fitBounds(LastFiveQuestionsAnsewredLayer.getBounds());
 	alert("Last Five Answered Questions Have been Loaded!");
 }
