@@ -108,6 +108,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     StopCreation();
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
     document.getElementById('participationRateMy').style.display = 'none';
+     document.getElementById('FiveDifficultPoint').style.display = 'none';
     document.getElementById('participationRateAll').style.display = 'block';
 }
 

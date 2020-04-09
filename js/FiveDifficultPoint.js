@@ -23,6 +23,7 @@ function loadFiveDifficultPoint(result) {
 			QuestionString = QuestionString + "</div></div>";
 	};	
 
+	StopCreation();
 	document.getElementById('FiveDifficultPoint').innerHTML = QuestionString;
 	document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
 	document.getElementById('participationRateAll').style.display = 'none';
