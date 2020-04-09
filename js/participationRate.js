@@ -103,7 +103,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/al
     .attr("y", 0 - 2)
     .attr("text-anchor", "middle")
     .style("font-size", "24px")
-    .text("The Number Participation Rates for The Past Week (All Users)");
+    .text("The Participation Rates for The Last Week (All Users)");
 
     StopCreation();
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";
@@ -217,7 +217,7 @@ d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my
     .attr("y", 0 - 2)
     .attr("text-anchor", "middle")
     .style("font-size", "24px")
-    .text("The Number Participation Rates for The Past Week (Only You)");
+    .text("The Participation Rates for The Last Week (Only You)");
 
     StopCreation();
     document.getElementById("mymap").innerHTML = "#mapContainer { height: 0px; }";

@@ -1,6 +1,5 @@
 function startDataUpload(position) { 
-	alert ("start data upload");
-
+	
 	if (document.getElementById("question_title").value == "") {
 	document.getElementById("question_title").classList.add("is-invalid");
 	document.getElementById("error_question_title").innerHTML = "Please Enter a Valid Question Title";
@@ -62,7 +61,7 @@ function startDataUpload(position) {
 	var answer_3 = document.getElementById("answer_3").value; 
 	var answer_4 = document.getElementById("answer_4").value; 
 
-	alert(question_title + " "+ question_text + " "+answer_1 + " "+ answer_2 + " "+answer_3+ " "+ answer_4);
+	alert ("start data upload");
 
 	var postString = "question_title="+question_title +"&question_text="+question_text+"&answer_1="+answer_1 +"&answer_2="+answer_2+"&answer_3="+answer_3+"&answer_4="+answer_4;
 
@@ -85,7 +84,6 @@ function startDataUpload(position) {
 	}	
 	// finally add the port id
 	postString = postString +"&port_id="+httpsPortNumberAPI;
-	alert (postString);
 	processData(postString);
 
 }// close off the startDataUpload function	
