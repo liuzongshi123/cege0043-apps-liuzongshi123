@@ -63,22 +63,15 @@ function checkAnswer(questionID) {
 	processAnswer(postString);
 	};
 	}
-	if (answerSelected !== 0) {
-	alertnumber();
-	}
+
 }
 
-function alertnumber() {
-	getCorrectNumber();
-}
-
-var correctnumber;
 function getCorrectNumber() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
 	"/quizanswers/correctnumber/"+ httpsPortNumberAPI,
 		crossDomain: true,
 		success: function(result){	
-		correctnumber = result[0].array_to_json[0].num_questions;
+		var correctnumber = result[0].array_to_json[0].num_questions;
 		correctnumber = "You have answered "+correctnumber+" questions correctly!";
   		alert(correctnumber);
 	}}); //end of the AJAX call
@@ -91,7 +84,7 @@ function processAnswer(postString) {
 		url: serviceUrl, 
 		crossDomain: true, 
 		type: "POST", 
-		success: function(data){console.log(data)}, 
+		success: function(data){console.log(data);getCorrectNumber()}, 
 		data: postString 
 	}); 
 }
