@@ -221,7 +221,7 @@
 
         <!-- Nav Item - Pages Collapse Menu 10-->
         <li class="nav-item d-none d-lg-block">
-          <a class="nav-link collapsed" href="https://developer.cege.ucl.ac.uk:'"+httpsPortNumberAPI + "'/Help_question.html" target="_blank">
+          <a class="nav-link collapsed" target="_blank" id = help_question>
             <i class="fas fa-fw fa-cog"></i>
             <span>Help</span>
           </a>
@@ -279,7 +279,7 @@
 
         <!-- Nav Item - Pages Collapse Menu 9-->
         <li class="nav-item d-lg-none">
-          <a class="nav-link collapsed" href="https://www.w3schools.com" target="_blank">
+          <a class="nav-link collapsed" target="_blank" id = "help_quiz">
             <i class="fas fa-fw fa-cog"></i>
             <span>Help</span>
           </a>
@@ -437,6 +437,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('question_creation').style.display = 'none';
   document.getElementById('modification').style.display = 'none';
   loadMap();
+  document.getElementById('help_question').href = 'https://developer.cege.ucl.ac.uk:'+httpsPortNumberApp+'/Help_question.html';
+  document.getElementById('help_quiz').href = 'https://developer.cege.ucl.ac.uk:'+httpsPortNumberApp+'/Help_quiz.html';
 }, false);
 
 </script>
