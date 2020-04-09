@@ -1,0 +1,91 @@
+<DOCTYPE html>
+  <html lang="en">
+  <head>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+
+    <!-- Tell IE to use the latest, best version. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  crossorigin="anonymous">
+
+    <!-- load JQuery --> 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+
+    <!-- load Referenced Script --> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+     <title>Help for Quiz App</title>
+    <!-- adapted from: https://blackrockdigital.github.io/startbootstrap-sb-admin-2/ -->
+	
+  </head>
+
+<body>
+	<h1 class = "d-flex justify-content-center">Help for Quiz App</h1>
+
+	<p style="font-size:24px" class="text-justify">This page is a brief introduction of Quiz App which can provide a guidance for you to use this app correctly.</p>
+
+	<p style="font-size:24px" class="text-justify">(<strong>Important!:</strong> The programmer has tried his best to debug this app and provide serval error handing to prevent app crash or different functions overlay with each other. However, it still not a perfect app. You can use this app in the way you liked, but the programmer suggests you close the function you are using before you start the other one!)</p>
+
+	<p style="font-size:24px" class="text-justify">When you load the Quiz app, an interactive map would be loaded, the app would also track your location and shown the result below the map. Apart form that, the quiz questions would be loaded and shown as blue points in the map, your location would shown as pink points in the map. The question which is the closest to you would pop up automatically. You can also click the point to see the question.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/beginning.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Submit Answer</strong> to submit your answer to the question. If your answer is wrong, the system would say "<strong>Better luck next time!</strong>", and change the point colour to red.</p> 
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer.png" width="600" height="120"></p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer2.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">If your answer is right, the system would say "<strong>Well done!</strong>", and change the point colour to green.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer3.png" width="600" height="120"></p>
+	
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer5.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">After that, the system would tell you how many questions you have answered correct include the question that you just submitted. If you did not choose an answer, the system would say "<strong>Please select an answer!</strong>"</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer6.png" width="600" height="120"></p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/checkanswer7.png" width="600" height="120"></p>
+
+	<h2 class = "d-flex justify-content-center">[Statistics] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Ranking</strong>" in "<strong>Statistics</strong>" function to get your current rank among all users.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/ranking.png" width="600" height="120"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Top Scorers</strong>" in "<strong>Statistics</strong>" function to get the graph show the top 5 scorers based on the number of correct answers.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/top_scorers.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Graph</strong>" in "<strong>Statistics</strong>" function to remove the graph and reload interactive map.</p>
+
+	<h2 class = "d-flex justify-content-center">[Answered Questions] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Questions</strong>" in "<strong>Answered Questions</strong>" function to get the last 5 question points that user has answered. The colour of the point is depending on whether they were right/wrong the first time they answered the question. Green means right, red means wrong, pink point is your location. You can click the point to see the question.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/answered_question.png" width="600" height="500"></p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/answered_question2.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Question</strong>" in "<strong>Answered Questions</strong>" function to remove the points reload the existing questions.</p>
+
+	<h2 class = "d-flex justify-content-center">[Questions Answered Wrong] Function</h2>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Load Questions</strong>" in "<strong>Questions Answered Wrong</strong>" function to load questions points and calculates proximity alerts only for questions that the user has not answered correctly. The question shown as dark blue point, pink point is your location. The question which is the closest to you would pop up automatically.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/answered_wrong.png" width="600" height="500"></p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/answered_wrong2.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can also answer the question again in this part, the colour of the point would change based on whether you answer the question correctly.</p>
+
+	<p class = "d-flex justify-content-center"><img src="css/images/help_quiz/answered_wrong3.png" width="600" height="500"></p>
+
+	<p style="font-size:24px" class="text-justify">You can click "<strong>Remove Question</strong>" in "<strong>Questions Answered Wrong</strong>" function remove the points reload the existing questions.</p>
+
+	<p style="font-size:24px" class="text-justify">(<strong>Note:</strong> If app crash when you are using, you can try to refresh the page to fix it!)</p>
+
+</body>
+</html>
