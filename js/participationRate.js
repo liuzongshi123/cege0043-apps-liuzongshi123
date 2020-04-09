@@ -8,7 +8,8 @@ const svg     = d3.select("#participationRateAll"),
       g       = svg.append("g")
                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/all").then(data => {
+d3.json("https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+  "/quizanswers/participationrate/all").then(data => {
   data = data[0].array_to_json;
   console.log(data);
   x.domain(data.map(d => d.day));
@@ -123,7 +124,8 @@ function participationRateMy() {
       g       = svg.append("g")
                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/participationrate/my").then(data => {
+d3.json("https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+  "/quizanswers/participationrate/my/"+ httpsPortNumberAPI).then(data => {
   data = data[0].array_to_json;
   console.log(data);
   x.domain(data.map(d => d.day));

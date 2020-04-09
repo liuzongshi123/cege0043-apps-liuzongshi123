@@ -57,7 +57,7 @@ function StopCreation() {
 var ranking;
 function getRanking() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-  "/quizanswers/ranking",
+  "/quizanswers/ranking/"+ httpsPortNumberAPI,
     crossDomain: true,
     success: function(result){  
     ranking = result[0].array_to_json[0].rank;

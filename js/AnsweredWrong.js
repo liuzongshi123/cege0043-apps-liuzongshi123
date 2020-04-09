@@ -1,6 +1,6 @@
 function getAnsweredWrong() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/AnsweredWrong",
+	"/AnsweredWrong/"+ httpsPortNumberAPI,
 		crossDomain: true,
 		success: function(result){	
 		loadAnsweredWrong(result);

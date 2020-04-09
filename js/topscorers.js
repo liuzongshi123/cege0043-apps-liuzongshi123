@@ -8,7 +8,8 @@ const svg     = d3.select("#topscorers"),
       g       = svg.append("g")
                    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-d3.json("https://developer.cege.ucl.ac.uk:30283/quizanswers/topscorers").then(data => {
+d3.json("https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
+  "/quizanswers/topscorers").then(data => {
   data = data[0].array_to_json;
   console.log(data);
   x.domain(data.map(d => d.port_id));

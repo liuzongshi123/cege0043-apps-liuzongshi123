@@ -1,6 +1,6 @@
 function getLastFiveQuestionsAnsewred() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/LastFiveQuestionsAnsewred",
+	"/LastFiveQuestionsAnsewred/"+ httpsPortNumberAPI,
 		crossDomain: true,
 		success: function(result){
 		loadLastFiveQuestionsAnsewred(result);

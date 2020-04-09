@@ -75,7 +75,7 @@ function alertnumber() {
 var correctnumber;
 function getCorrectNumber() {
 $.ajax({url:"https://developer.cege.ucl.ac.uk:"+ httpsPortNumberAPI +
-	"/quizanswers/correctnumber",
+	"/quizanswers/correctnumber/"+ httpsPortNumberAPI,
 		crossDomain: true,
 		success: function(result){	
 		correctnumber = result[0].array_to_json[0].num_questions;
