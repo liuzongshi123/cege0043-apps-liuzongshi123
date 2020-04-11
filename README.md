@@ -26,3 +26,26 @@ cd /home/studentuser/code
 git clone https://github.com/ucl-geospatial/cege0043-apps-liuzongshi123
 ```
 
+2. Clone the source code of the corresponding Node JS server from Github to CEGE server at `home/studentuser/code`.
+
+```javascript
+cd /home/studentuser/code
+git clone https://github.com/ucl-geospatial/cege0043-data-api-liuzongshi123
+```
+
+3. Go to the `cege0043-data-api-liuzongshi123` folder and start the Node JS server.
+
+```javascript
+cd /home/studentuser/code/cege0043-data-api-liuzongshi123
+pm2 start dataAPI.js
+```
+
+4. Make sure the Node JS server is successfully started. If any error occurs, you could enter the debug mode through the command line window by typing:
+
+```javascript
+cd /home/studentuser/code/cege0043-data-api-liuzongshi123
+node dataAPI.js
+```
+
+
+
