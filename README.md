@@ -76,7 +76,16 @@ node dataAPI.js
 
 * div:
 
-<table align="center"><thead><tr><th>姓名</th><th>年龄</th><th>住址</th><th>性别</th><th>描述</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td></td><td>1</td><td>1</td></tr><tr><td>1</td><td>1</td><td></td><td>1</td><td>1 1</td></tr></tbody></table>
+<table align="center">
+	<thead align="center"><tr>
+		<th>ID</th>
+		<th>Description</th>
+	</tr></thead>
+	<tbody><tr>
+		<td>1</td>
+		<td>1</td>
+	</tr></tbody>
+ </table>
 
 
 
