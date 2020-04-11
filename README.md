@@ -123,64 +123,64 @@ node dataAPI.js
 		</tr></thead>
 		<tbody align="center">
 			<tr>
-			<td><code>Start Creation</code> in <code>Create Questions</code></td>
+			<td><code>Start Creation</code> in <strong>Create Questions</strong></td>
 			<td align="center">Start the clip event on leaflet map which declide the location of the question.<br>
 			Hold the button <code>Creation Question Here</code>.</td>
 			</tr>
 			<tr>
-			<td><code>Creation Question Here</code> in <code>Create Questions</code></td>
+			<td><code>Creation Question Here</code></td>
 			<td align="center">Load the question creation form</td>
 			</tr>
 			<tr>
-			<td><code>Delete Creation</code> in <code>Create Questions</code></td>
+			<td><code>Delete Creation</code> in <strong>Create Questions</strong></td>
 			<td align="center">Load the delete form to delete question and answer in database.</td>
 			</tr>
 			<tr>
-			<td><code>Stop Creation</code></td>
+			<td><code>Stop Creation</code>in <strong>Create Questions</strong></td>
 			<td align="center">Hide the question creation form or delete form.</td>
 			</tr>
 			<tr>
-			<td><code>Load Points</code> in <code>Existing Points</code></td>
+			<td><code>Load Points</code> in <strong>Existing Points</strong></td>
 			<td align="center">Load all the existing quiz points created by the current user.</td>
 			</tr>
 			<tr>
-			<td><code>Remove Existing Points</code> in <code>Existing Points</code></td>
+			<td><code>Remove Existing Points</code> in <strong>Existing Points</strong></td>
 			<td align="center">Remove the existing quiz points created by the current user.</td>
 			</tr>
 			<tr>
-			<td><code>Load Points</code> in <code>Closest 5 Points</code></td>
+			<td><code>Load Points</code> in <strong>Closest 5 Points</strong></td>
 			<td align="center">Load the closest five points to your current location created by all users.</td>
 			</tr>
 			<tr>
-			<td><code>Remove Points</code> in <code>Closest 5 Points</code></td>
+			<td><code>Remove Points</code> in <strong>Closest 5 Points</strong></td>
 			<td align="center">Remove the closest five points to your current location created by all users.</td>
 			</tr>
 			<tr>
-			<td><code>Load Questions</code> in <code>Diffcult 5 Questions</code></td>
+			<td><code>Load Questions</code> in <strong>Diffcult 5 Questions</strong></td>
 			<td align="center">Load the most difficult five questions created by any user where most wrong answers were given.</td>
 			</tr>
 			<tr>
-			<td><code>Remove Questions</code> in <code>Diffcult 5 Questions</code></td>
+			<td><code>Remove Questions</code> in <strong>Diffcult 5 Questions</strong></td>
 			<td align="center">Remove the most difficult five questions created by any user where most wrong answers were given.</td>
 			</tr>
 			<tr>
-			<td><code>Load Questions</code> in <code>Added Questions</code></td>
+			<td><code>Load Questions</code> in <strong>Added Questions</strong></td>
 			<td align="center">Load the points added in the last week by any user.</td>
 			</tr>
 			<tr>
-			<td><code>Remove Questions</code> in <code>Added Questions</code></td>
+			<td><code>Remove Questions</code> in <strong>Added Questions</strong></td>
 			<td align="center">Remove the points added in the last week by any user.</td>
 			</tr>
 			<tr>
-			<td><code>All User Rates</code> in <code>Participation Rates</code></td>
+			<td><code>All User Rates</code> in <strong>Participation Rates</strong></td>
 			<td align="center">Load a histogram of daily participation rates of  all users in the database during last week, including how many questions have been answered and how many answers were correct.</td>
 			</tr>
 			<tr>
-			<td><code>My Rates</code> in <code>Participation Rates</code></td>
+			<td><code>My Rates</code> in <strong>Participation Rates</stronge></td>
 			<td align="center">Load a histogram of daily participation rates of the current user during last week, including how many questions have been answered and how many answers were correct.</td>
 			</tr>
 			<tr>
-			<td><code>Remove Graph</code> in <code>Participation Rates</code></td>
+			<td><code>Remove Graph</code> in <strong>Participation Rates</strong></td>
 			<td align="center">Remove the histogram and reload leaflet map.</td>
 			</tr>
 			<tr>
