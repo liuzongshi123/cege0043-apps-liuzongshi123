@@ -14,7 +14,7 @@
 ## 1. System Requirements
 * <p align="justify">In order to enable the full functionality of these two apps, a browser that supports geolocation access via https connection is required. So most browsers can be used for these two apps. In order to make sure the apps can locate and zoom into user positions, it is recommended to use Chrome(Version 73.0.3683.75 or above) or Safari(Version 13.1 or above) for these two apps.</p>
 
-* <p align="justify">These twp apps requires to make connections to a Ubuntu Server (Virtual Machine). You could use BitVise, Pycharm (Version 2018.3.5 Professional Edition) or other SSH software to connect to the Ubuntu Server.</p>
+* <p align="justify">These twp apps requires to make connections to a Ubuntu Server (Virtual Machine). You could use BitVise, Pycharm or other SSH software to connect to the Ubuntu Server.</p>
 
 * <p align="justify">If you are going to use this app outside the UCL campus (not connected to Eduroam), make sure you are connected to UCL VPN by following the instructions at https://www.ucl.ac.uk/isd/services/get-connected/remote-working-services/ucl-virtualprivate-network-vpn.</p>
 
@@ -65,9 +65,11 @@ node dataAPI.js
 
 <p align="justify">3. For <strong>Question Setting App</strong>. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
 
-<p align="justify">4. For <strong>Quiz App</strong>. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
+<p align="justify">4. For <strong>Question Setting App</strong>. While testing the functionality of this map, use of <code>Inspect</code> or <code>Developer mode</code> of the browser to see if any error occurs.</p>
 
-<p align="justify">5. While testing the functionality of this map, use of <code>Inspect</code> or <code>Developer mode</code> of the browser to see if any error occurs.</p>
+<p align="justify">5. For <strong>Quiz App</strong>. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
+
+
 
 
 ## 4. File description
