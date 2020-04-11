@@ -209,6 +209,8 @@ node dataAPI.js
 	</tbody>
 	</table>
 
+<br>
+
 <p align="justify"><code>Help_question.html</code>: The main html file contain the brief introduction to this app.</p>
 
 <br>
@@ -218,7 +220,11 @@ node dataAPI.js
 
 `leaflet.awesome-markers.js`:  Add colorful iconic markers for Leaflet.
 
+<br>
+
 `icon.js`:  Create several global varibles for different colored icon.
+
+<br>
 
 `basicMap.js`:  Create a global varible global variable to store the map. Contain two functions to load the leaflet map.
 
@@ -238,6 +244,25 @@ node dataAPI.js
 			</tr>
 	</tbody>
 	</table>
+
+<br>
+
+`utilities.js`: 
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getPorts()</code></td>
+			<td align="center">Get user port numbers, which are required to build database connections for data uploading and downloading.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
 
 `menu.js`:  Contain functions for <strong>Create Questions</strong> part.
 
@@ -271,10 +296,62 @@ node dataAPI.js
 			<td><code>StopCreation()</code></td>
 			<td align="center">Hide the question creation form or delete form after user click <code>Stop Creation</code> button.</td>
 			</tr>
-			<tr>
 	</tbody>
 	</table>
 
+<br>
+
+`popup.js`: 
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getFormData()</code></td>
+			<td align="center">Ajax link to get existing question points of current user in database.</td>
+			</tr>
+			<tr>
+			<td><code>loadFormData()</code></td>
+			<td align="center">Add existing points to leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>removeFormData()</code></td>
+			<td align="center">Remove existing points on leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`FiveClosestPoint.js`: 
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>LoadUserLocation()</code></td>
+			<td align="center">Get current location of user and pass it to <code>GetFiveClosestPoint()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>GetFiveClosestPoint()</code></td>
+			<td align="center">Ajax link to get points from database.</td>
+			</tr>
+			<tr>
+			<td><code>loadFiveClosestPoint()</code></td>
+			<td align="center">Get the data of five closest points and add them to leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveFiveClosestPoint()</code></td>
+			<td align="center">Remove five closest points on leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
 
 
 
