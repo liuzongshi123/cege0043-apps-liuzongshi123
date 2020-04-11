@@ -271,6 +271,39 @@ node dataAPI.js
 
 <br>
 
+`uploadDta.js`:  Contain functions for data upload.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>startDataUpload()</code></td>
+			<td align="center">Upload question that user created to database only if user fill all input boxes for question creation.</td>
+			</tr>
+			<tr>
+			<td><code>processData()</code></td>
+			<td align="center">Ajax link to upload question data to database.</td>
+			</tr>
+			<tr>
+			<td><code>dataUploaded()</code></td>
+			<td align="center">Show the result message of data uploaded.</td>
+			</tr>
+			<tr>
+			<td><code>deleteQuestion()</code></td>
+			<td align="center">Ajax link to delete question that user created in database based on question ID provided by user. Function would shut down if user do not enter anything.</td>
+			</tr>
+			<tr>
+			<td><code>questionDeleted</code></td>
+			<td align="center">Show the result message of question delete.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
 `menu.js`:  Contain functions for <strong>Create Questions</strong> part.
 
 <table align="center">
@@ -302,6 +335,27 @@ node dataAPI.js
 			<tr>
 			<td><code>StopCreation()</code></td>
 			<td align="center">Hide the question creation form or delete form after user click <code>Stop Creation</code> button.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`checkanswer.js`:  Contain functions to delete answer in database.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>deleteAnswer()</code></td>
+			<td align="center">Ajax link to delete the answer in databased based on the answer ID provided by user. The function would shut down if user do not enter anything.</td>
+			</tr>
+			<tr>
+			<td><code>AnswerDeleted()</code></td>
+			<td align="center">Show the result message of delete.</td>
 			</tr>
 	</tbody>
 	</table>
@@ -629,7 +683,8 @@ node dataAPI.js
 			</tr>
 			<tr>
 			<td><code>loadFormData()</code></td>
-			<td align="center">Add existing points to leaflet map.</td>
+			<td align="center">Add existing points to leaflet map.<br>
+			Hold the question form and button <code>submit answer</code></td>
 			</tr>
 			<tr>
 			<td><code>removeFormData()</code></td>
@@ -642,6 +697,31 @@ node dataAPI.js
 			<tr>
 			<td><code>calculateDistance()</code></td>
 			<td align="center">Calculate the distance between user's location and location of quiz point.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`checkanswer.js`:  Contain functions to check the answer of the question and upload data to database.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>checkAnswer()</code></td>
+			<td align="center">Check whether user select a correct answer for the question and told the result to the user. Change the color of the quiz point when the question has been answered, with the colour depending on whether answer was right or wrong. Upload the answer to the database if user select an answer.</td>
+			</tr>
+			<tr>
+			<td><code>processAnswer()</code></td>
+			<td align="center">Ajax link to upload the answer data to database.</td>
+			</tr>
+			<tr>
+			<td><code>getCorrectNumber()</code></td>
+			<td align="center">Alert how many question user have answered correctly after they anser the question.</td>
 			</tr>
 	</tbody>
 	</table>
