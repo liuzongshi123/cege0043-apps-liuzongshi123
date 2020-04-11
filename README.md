@@ -70,11 +70,12 @@ node dataAPI.js
 
 The files associated te this question setting app are located in the `cege0043-apps-liuzongshi123` folder and several subfolders.
 
-* cege0043-apps-liuzongshi123
+* `cege0043-apps-liuzongshi123`
 
 `main.html`: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the `cege0043-apps-liuzongshi123` folder and makes use of them. This html contains several divs and menu buttons.
 
 * div:
+
 |标题|标题|标题|
 |:---|:---:|---:|
 |居左测试文本|居中测试文本|居右测试文本|
