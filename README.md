@@ -301,7 +301,7 @@ node dataAPI.js
 
 <br>
 
-`popup.js`: 
+`popup.js`: Contain functions for <strong>Existing Points</strong> part.
 
 <table align="center">
 	<thead align="center"><tr>
@@ -326,7 +326,7 @@ node dataAPI.js
 
 <br>
 
-`FiveClosestPoint.js`: 
+`FiveClosestPoint.js`: Contain functions for <strong>Closest 5 Points</strong> part.
 
 <table align="center">
 	<thead align="center"><tr>
@@ -349,6 +349,81 @@ node dataAPI.js
 			<tr>
 			<td><code>RemoveFiveClosestPoint()</code></td>
 			<td align="center">Remove five closest points on leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`FiveDifficultPoint.js`: Contain functions for <strong>Difficult 5 Questions</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getFiveDifficultPoint()</code></td>
+			<td align="center">Ajax link to get questions from database and pass them to <code>loadFiveDifficultPoint()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>loadFiveDifficultPoint()</code></td>
+			<td align="center">Creat a list to show five questions and show the list to user. Then hide the other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveFiveDifficultPoint()</code></td>
+			<td align="center">Remove the question list and reload the leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`QuestionLastWeek.js`: Contain functions for <strong>Added Questions</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getQuestionLastWeek()</code></td>
+			<td align="center">Ajax link to get question points from database and pass them to <code>loadQuestionLastWeek()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>loadQuestionLastWeek()</code></td>
+			<td align="center">Load the points added in the last week by any user and add them to leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveQuestionLastWeek()</code></td>
+			<td align="center">Remove points on leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`participationRate.js`: Contain functions for <strong>Participation Rates</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>participationRateAll()</code></td>
+			<td align="center">Get the participation rates data for all users from database and draw a histogram to show the data. Then hide the other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>participationRateMy()</code></td>
+			<td align="center">Get the participation rates data for current user from database and draw a histogram to show the data. Then hide the other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveparticipationRate()</code></td>
+			<td align="center">Remove all users' participation rates histogram or current user's participation rates histogram and reload the leaflet map.</td>
 			</tr>
 	</tbody>
 	</table>
