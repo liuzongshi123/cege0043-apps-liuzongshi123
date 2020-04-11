@@ -495,6 +495,25 @@ node dataAPI.js
 	</table>
 
 <br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/css`**: Setting up styles of `main.html` (such as fonts and margins) and incorporating the CSS required for custom icon creation.
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/css/image`**: Containing images required by `index.html`.
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/res`**
+
+<p align="justify"><code>port.xml</code>: Contains user port id data of http and https connections.</p>
+
+
+
+<br>
 
 ### 4.2 Quiz App File description
 
@@ -826,6 +845,25 @@ node dataAPI.js
 			</tr>
 	</tbody>
 	</table>
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/css`**: Setting up styles of `main.html` (such as fonts and margins) and incorporating the CSS required for custom icon creation.
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/css/image`**: Containing images required by `index.html`.
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/res`**
+
+<p align="justify"><code>port.xml</code>: Contains user port id data of http and https connections.</p>
+
+
 
 ## 5. Code reference
 
