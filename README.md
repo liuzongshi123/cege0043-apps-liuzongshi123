@@ -71,12 +71,11 @@ node dataAPI.js
 
 
 
-
 ## 4. File description
 
 ### 4.1 Question Setting App File description
 
-<p align="justify">The files associated te this question setting app are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
+<p align="justify">The files associated to <strong>Question Setting App</strong> are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
 
 * **`cege0043-apps-liuzongshi123`**
 
@@ -144,7 +143,7 @@ node dataAPI.js
 			<td align="center">Load the delete form to delete question and answer in database.</td>
 			</tr>
 			<tr>
-			<td><code>Stop Creation</code>in <strong>Create Questions</strong></td>
+			<td><code>Stop Creation</code> in <strong>Create Questions</strong></td>
 			<td align="center">Hide the question creation form or delete form.</td>
 			</tr>
 			<tr>
@@ -432,6 +431,107 @@ node dataAPI.js
 			<tr>
 			<td><code>RemoveparticipationRate()</code></td>
 			<td align="center">Remove all users' participation rates histogram or current user's participation rates histogram and reload the leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+<br>
+
+### 4.2 Quiz App File description
+
+<p align="justify">The files associated to <strong>Quiz App</strong> are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
+
+* **`cege0043-apps-liuzongshi123`**
+
+<p align="justify"><code>main.html</code>: The main html file of this app, through which user could use all the quiz functionality. It interconnects all of the resources within the <code>cege0043-apps-liuzongshi123</code> folder and makes use of them. This html contains several divs and menu buttons.</p>
+
+* div:
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>ID</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>wrapper</code></td>
+			<td align="center">Hold the <code>Sidebar</code> and <code>Main Content</code>.</td>
+			</tr>
+			<tr>
+			<td><code>Sidebar</code></td>
+			<td align="center">Hold all buttons.</td>
+			</tr>
+			<tr>
+			<td><code>Main Content</code></td>
+			<td align="center">Hold the <code>mapContainer</code> and <code>userlocation</code>.</td>
+			</tr>
+			</tr>
+			<tr>
+			<td><code>mapContainer</code></td>
+			<td align="center">Hold the leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>userlocation</code></td>
+			<td align="center">Hold the text which show user's location.</td>
+			</tr>
+	</tbody>
+	</table>
+
+* Button:
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Name</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>Ranking</code> in <strong>Statistics</strong></td>
+			<td align="center">Alert a message to tell users their current ranking.</td>
+			</tr>
+			<tr>
+			<td><code>Top Scorers</code> in <strong>Statistics</strong></td>
+			<td align="center">Load a histogram showing top 5 scorers in the quiz from database.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Grapgh</code> in <strong>Statistics</strong></td>
+			<td align="center">Remove the histogram showing top 5 scorers in the quiz from database and reload leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>Load Questions</code> in <strong>Answered Questions</strong></td>
+			<td align="center">Only show the last 5 questions that the user answered and hide other layers.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Questions</code> in <strong>Answered Questions</strong></td>
+			<td align="center">Remove the last 5 questions that the user answered and reload the existing qiz points.</td>
+			</tr>
+			<tr>
+			<td><code>Load Questions</code> in <strong>Question Answered Wrong</strong></td>
+			<td align="center">Only show questions and calculates proximity alerts for questions that the user hasn’t answered correctly and hide other layers.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Questions</code> in <strong>Question Answered Wrong</strong></td>
+			<td align="center">Remove questions that the user hasn’t answered correctly and reload the existing qiz points.</td>
+			</tr>
+			<tr>
+			<td><code>Help</code></td>
+			<td align="center">Link to the <code>Help_quiz.html</code> which contain a breif introduction to this app.</td>
+			</tr>
+	</tbody>
+	</table>
+
+* svg:
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>ID</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>topscorers</code></td>
+			<td align="center">Hold the histogram showing top 5 scorers in the quiz from database.</td>
 			</tr>
 	</tbody>
 	</table>
