@@ -40,7 +40,7 @@ cd /home/studentuser/code/cege0043-data-api-liuzongshi123
 pm2 start dataAPI.js
 ```
 
-4. Go to the `cege0043-apps-liuzongshi123` folder and start the app server.
+<p align="justify">4. Go to the <code>cege0043-apps-liuzongshi123</code> folder and start the app server.</p>
 
 ```javascript
 cd /home/studentuser/code/cege0043-apps-liuzongshi123
@@ -83,6 +83,7 @@ The files associated te this question setting app are located in the `cege0043-a
 |居左测试文本1|居中测试文本2|居右测试文本3|
 |居左测试文本11|居中测试文本22|居右测试文本33|
 |居左测试文本111|居中测试文本222|居右测试文本333|
+#align= center 
 
 </a>
 
