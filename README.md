@@ -218,7 +218,7 @@ node dataAPI.js
 
 <br>
 
-<p align="justify"><code>Help_question.html</code>: The main html file contain the brief introduction to this app.</p>
+<p align="justify"><code>Help_question.html</code>: The html file contain the brief introduction to this app.</p>
 
 <br>
 <br>
@@ -436,7 +436,6 @@ node dataAPI.js
 	</table>
 
 <br>
-<br>
 
 ### 4.2 Quiz App File description
 
@@ -535,6 +534,138 @@ node dataAPI.js
 			</tr>
 	</tbody>
 	</table>
+
+<br>
+
+<p align="justify"><code>Help_quiz.html</code>: The html file contain the brief introduction to this app.</p>
+
+<br>
+<br>
+
+* **`cege0043-apps-liuzongshi123/js`**: Containing Javascript files required by `main.html`.
+
+`leaflet.awesome-markers.js`:  Add colorful iconic markers for Leaflet.
+
+<br>
+
+`icon.js`:  Create several global varibles for different colored icon.
+
+<br>
+
+`basicMap.js`:  Create a global varible global variable to store the map. Contain two functions to load the leaflet map.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getLocation()</code></td>
+			<td align="center">Get curry Loction of user and pass it to function <code>loadLeafletMap()</code>.</td>
+			</tr>
+			<tr>
+			<td><code>loadLeafletMap()</code></td>
+			<td align="center">Load the leaflet map and zoom to current position of users. Starts <code>getFormData()</code> function and <code>trackLocation()</code> function to load existing quiz points and track user's location</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`utilities.js`: 
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getPorts()</code></td>
+			<td align="center">Get user port numbers, which are required to build database connections for data uploading and downloading.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`trackLocation.js`:  Contain functions to track user's location.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>trackLocation()</code></td>
+			<td align="center">Track user's location and pass the location to <code>showPosition()</code> function and <code>closestFormPoint()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>showPosition()</code></td>
+			<td align="center">Add a marker which show user's location on leaflet map and pass the location as text shown below the map.</td>
+			</tr>
+			<tr>
+			<td><code>removeLocationLayers()</code></td>
+			<td align="center">Remove the extra user's location on leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`popup.js`: Contain functions for app load existing quiz points and popup the closest quiz point based on user's location.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getFormData()</code></td>
+			<td align="center">Ajax link to get existing question points of current user in database.</td>
+			</tr>
+			<tr>
+			<td><code>loadFormData()</code></td>
+			<td align="center">Add existing points to leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>removeFormData()</code></td>
+			<td align="center">Remove existing points on leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>closestFormPoint()</code></td>
+			<td align="center">Get user's location and open the question form for the closest quiz based on user's current location.</td>
+			</tr>
+			<tr>
+			<td><code>calculateDistance()</code></td>
+			<td align="center">Calculate the distance between user's location and location of quiz point.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`menu.js`:  Contain function for <code>Ranking</code> function.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getRanking()</code></td>
+			<td align="center">Ajax link to get ranking data from database and alert the ranking message to user.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+
 
 ## 5. Code reference
 
