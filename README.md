@@ -70,20 +70,20 @@ node dataAPI.js
 
 <p align="justify">The files associated te this question setting app are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
 
-* `cege0043-apps-liuzongshi123`
+<p align="justify">* <code>cege0043-apps-liuzongshi123</code></p>
 
-`main.html`: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the `cege0043-apps-liuzongshi123` folder and makes use of them. This html contains several divs and menu buttons.
+<p align="justify"><code>main.html</code>: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the <code>cege0043-apps-liuzongshi123</code> folder and makes use of them. This html contains several divs and menu buttons.</p>
 
 * div:
 <a align="center">
-
+<table>
 |标题|标题|标题|
  :-: | :-: | :-:
 |居左测试文本|居中测试文本|居右测试文本|
 |居左测试文本1|居中测试文本2|居右测试文本3|
 |居左测试文本11|居中测试文本22|居右测试文本33|
 |居左测试文本111|居中测试文本222|居右测试文本333|
-#align= center 
+</table>
 
 </a>
 
