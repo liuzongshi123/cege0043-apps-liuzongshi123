@@ -75,9 +75,9 @@ node dataAPI.js
 <p align="justify"><code>main.html</code>: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the <code>cege0043-apps-liuzongshi123</code> folder and makes use of them. This html contains several divs and menu buttons.</p>
 
 * div:
-<div style="text-align:center">
+<p align="center">
 <table style="margin:auto"><thead><tr><th>ID</th><th>Description</th></tr></thead><tbody align="center"><tr><td>1</td><td>1</td></tr></tbody></table>
-</div>
+</p>
 
 
 
