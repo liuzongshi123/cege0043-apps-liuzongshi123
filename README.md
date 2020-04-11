@@ -440,8 +440,8 @@ node dataAPI.js
 
 * <p align="justify">Many basic functions related to how to structure different things on web page, such as how to adjust the location of the text, how to hide or display the <code>div</code>, or how to make the input box colored in red and show wrong message if user do not fill the input box. [provided by <strong>RUNOOB.COM</strong>].</p>
 
-* <p align="justify">How to add legends and create double column for D3 Graph from <strong>https://www.cnblogs.com/chenjy1225/p/10982481.html</strong> accessed 8th April 2020.</p>
+* <p align="justify">How to add legends and create double column for D3 Graph from https://www.cnblogs.com/chenjy1225/p/10982481.html accessed 8th April 2020.</p>
 
-* <p align="justify">How to add axis labels and title for D3 Graph from <strong>https://www.cnblogs.com/MockingBirdHome/p/3368739.html</strong> accessed 8th April 2020.</p>
+* <p align="justify">How to add axis labels and title for D3 Graph from https://www.cnblogs.com/MockingBirdHome/p/3368739.html accessed 8th April 2020.</p>
 
-* <p align="justify">Change the image of bootStrap icon based on <strong>https://fontawesome.com/</strong> accessed 5th April 2020..</p>
+* <p align="justify">Change the image of bootStrap icon based on https://fontawesome.com accessed 5th April 2020.</p>
