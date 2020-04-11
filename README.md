@@ -74,7 +74,7 @@ node dataAPI.js
 
 <p align="justify"><code>main.html</code>: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the <code>cege0043-apps-liuzongshi123</code> folder and makes use of them. This html contains several divs and menu buttons.</p>
 
-** div:
+* div:
 
 <table align="center">
 	<thead align="center"><tr>
@@ -115,7 +115,7 @@ node dataAPI.js
 	</tbody>
 	</table>
 
-** Button:
+* Button:
 <table align="center">
 	<thead align="center"><tr>
 		<th>Name</th>
@@ -173,7 +173,7 @@ node dataAPI.js
 			</tr>
 			<tr>
 			<td><code>All User Rates</code> in <strong>Participation Rates</strong></td>
-			<td align="center">Load a histogram of daily participation rates of  all users in the database during last week, including how many questions have been answered and how many answers were correct.</td>
+			<td align="center">Load a histogram of daily participation rates of all users in the database during last week, including how many questions have been answered and how many answers were correct.</td>
 			</tr>
 			<tr>
 			<td><code>My Rates</code> in <strong>Participation Rates</stronge></td>
@@ -186,6 +186,25 @@ node dataAPI.js
 			<tr>
 			<td><code>Help</code></td>
 			<td align="center">Link to the <code>Help_question.html</code> which contain a breif introduction to this app.</td>
+			</tr>
+	</tbody>
+	</table>
+
+* svg:
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>ID</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>participationRateAll</code></td>
+			<td align="center">Hold the histogram of daily participation rates of all users in the database during last week.</td>
+			</tr>
+			<tr>
+			<td><code>participationRateMy</code></td>
+			<td align="center">Hold the histogram of daily participation rates of the current user during last week.</td>
 			</tr>
 	</tbody>
 	</table>
