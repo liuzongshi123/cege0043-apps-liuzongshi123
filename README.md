@@ -75,7 +75,7 @@ The files associated te this question setting app are located in the `cege0043-a
 `main.html`: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the `cege0043-apps-liuzongshi123` folder and makes use of them. This html contains several divs and menu buttons.
 
 * div:
-<p align="justify">
+<p align="center">
 
 |标题|标题|标题|
  :-: | :-: | :-:
