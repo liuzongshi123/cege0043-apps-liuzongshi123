@@ -16,3 +16,8 @@
 
 * <p align="justify">If you are going to use this app outside the UCL campus (not connected to Eduroam), make sure you are connected to UCL VPN by following the instructions at https://www.ucl.ac.uk/isd/services/get-connected/remote-working-services/ucl-virtualprivate-network-vpn.</p>
 
+## 2. Deployment
+* <p align="justify">Procedures to deploy this app:</p>
+
+<p align="justify"> Clone the source code of this question setting app from Github to CEGE server at `home/studentuser/code` by typing in the command line (terminal) window for Ubuntu:</p>
+
