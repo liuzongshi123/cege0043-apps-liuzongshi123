@@ -86,6 +86,32 @@ node dataAPI.js
 			<td><code>wrapper</code></td>
 			<td align="justify">Hold the <code>Sidebar</code> and <code>Main Content</code></td>
 			</tr>
+			<tr>
+			<td><code>Sidebar</code></td>
+			<td align="justify">Hold all buttons</td>
+			</tr>
+			<tr>
+			<td><code>Main Content</code></td>
+			<td align="justify">Hold the <code>mapContainer</code>, <code>question_creation</code>, <code>modification</code> and <code>FiveDifficultPoint</code></td>
+			</tr>
+			</tr>
+			<tr>
+			<td><code>mapContainer</code></td>
+			<td align="justify">Hold the leaflet map</td>
+			</tr>
+			<tr>
+			<td><code>question_creation</code></td>
+			<td align="justify">Hold the question creatrion form</td>
+			</tr>
+			<tr>
+			<td><code>modification</code></td>
+			<td align="justify">Hold the form to delete question and answer in database</td>
+			</tr>
+			</tr>
+			<tr>
+			<td><code>FiveDifficultPoint<</code></td>
+			<td align="justify">Hold the list to show five difficult quesitons in database</td>
+			</tr>
 	</tbody>
 	</table>
 
