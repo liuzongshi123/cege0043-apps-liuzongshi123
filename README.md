@@ -76,7 +76,75 @@ node dataAPI.js
 
 * div:
 
-<table align="center" margin = "auto"><thead align="center"><tr><th>ID</th><th>Description</th></tr></thead><tbody align="center"><tr><td>1</td><td>1</td></tr></tbody></table>
+<table border="1" cellspacing="1" align="center" style="padding:0px; background:#666666;">
+<caption> excel转html </caption>
+<tr>
+  <td style="width:71px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:bold;text-align:center;padding:0px;" colspan="4" rowspan="1">
+粗体 居中</td>
+<td style="width:108px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:center;padding:0px;" colspan="2" rowspan="2">
+水平垂直方向居中</td>
+</tr>
+<tr>
+  <td style="width:71px;height:18px;color:#FF0000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:center;padding:0px;" colspan="2" rowspan="1">
+红色</td>
+<td style="width:85px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:center;padding:0px;" colspan="2" rowspan="1">
+黑色</td>
+</tr>
+<tr>
+  <td style="width:71px;height:18px;color:#00FF00;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+绿色</td>
+<td style="width:71px;height:18px;color:#000000;background:#FFFF00;font-size:11pt;font-weight:nomal;text-align:center;padding:0px;" colspan="1" rowspan="2">
+黄色背景</td>
+<td style="width:85px;height:18px;color:#000000;background:#FF00FF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+1</td>
+<td style="width:71px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+3</td>
+<td style="width:108px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+aiueo</td>
+<td style="width:108px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+abc</td>
+</tr>
+<tr>
+  <td style="width:71px;height:19px;color:#0000FF;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+青色</td>
+<td style="width:85px;height:19px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+2</td>
+<td style="width:71px;height:19px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+4</td>
+<td style="width:108px;height:19px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+def</td>
+<td style="width:108px;height:19px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+ghi</td>
+</tr>
+<tr>
+  <td style="width:71px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+1</td>
+<td style="width:71px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+2</td>
+<td style="width:85px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+红色边框</td>
+<td style="width:71px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+黑色边框</td>
+<td style="width:108px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:left;padding:0px;">
+黑色边框</td>
+<td style="width:108px;height:20px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+6</td>
+</tr>
+<tr>
+  <td style="width:71px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+7</td>
+<td style="width:71px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+8</td>
+<td style="width:85px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+9</td>
+<td style="width:71px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+10</td>
+<td style="width:108px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+11</td>
+<td style="width:108px;height:18px;color:#000000;background:#FFFFFF;font-size:11pt;font-weight:nomal;text-align:right;padding:0px;">
+12</td>
+</tr>
+</table>
 
 
 
