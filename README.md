@@ -19,7 +19,7 @@
 ## 2. Deployment
 * <p align="justify">Procedures to deploy this app:</p>
 
-<p align="justify">1. Clone the source code of this question setting app from Github to CEGE server at `home/studentuser/code` by typing in the command line (terminal) window for Ubuntu:</p>
+1. Clone the source code of this question setting app from Github to CEGE server at `home/studentuser/code` by typing in the command line (terminal) window for Ubuntu:
 
 ```javascript
 cd /home/studentuser/code
