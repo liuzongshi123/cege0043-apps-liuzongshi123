@@ -81,7 +81,7 @@ node dataAPI.js
 		<th>ID</th>
 		<th>Description</th>
 	</tr></thead>
-	<tbody><tr>
+	<tbody align="center"><tr>
 		<td>1</td>
 		<td>1</td>
 	</tr></tbody>
