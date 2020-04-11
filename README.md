@@ -216,11 +216,11 @@ node dataAPI.js
 
 * **`cege0043-apps-liuzongshi123/js`**: Containing Javascript files required by `main.html`.
 
-* `leaflet.awesome-markers.js`:  Add colorful iconic markers for Leaflet.
+`leaflet.awesome-markers.js`:  Add colorful iconic markers for Leaflet.
 
-* `icon.js`:  Create several global varibles for different colored icon.
+`icon.js`:  Create several global varibles for different colored icon.
 
-* `basicMap.js`:  Create a global varible global variable to store the map. Contain two functions to load the leaflet map.
+`basicMap.js`:  Create a global varible global variable to store the map. Contain two functions to load the leaflet map.
 
 <table align="center">
 	<thead align="center"><tr>
@@ -239,7 +239,7 @@ node dataAPI.js
 	</tbody>
 	</table>
 
-* `menu.js`:  Contain functions for <strong>Create Questions</strong> part.
+`menu.js`:  Contain functions for <strong>Create Questions</strong> part.
 
 <table align="center">
 	<thead align="center"><tr>
