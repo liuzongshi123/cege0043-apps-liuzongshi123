@@ -40,12 +40,31 @@ cd /home/studentuser/code/cege0043-data-api-liuzongshi123
 pm2 start dataAPI.js
 ```
 
-4. Make sure the Node JS server is successfully started. If any error occurs, you could enter the debug mode through the command line window by typing:
+4. Go to the `cege0043-apps-liuzongshi123` folder and start the app server.
+
+```javascript
+cd /home/studentuser/code/cege0043-data-api-liuzongshi123
+pm2 start app.js
+```
+
+5. Make sure the Node JS server is successfully started. If any error occurs, you could enter the debug mode through the command line window by typing:
 
 ```javascript
 cd /home/studentuser/code/cege0043-data-api-liuzongshi123
 node dataAPI.js
 ```
+
+## 3. Testing
+* <p align="justify">Procedures to test this app:</p>
+
+<p align="justify">1. Make sure your device is connected to UCL Wifi or UCL VPN.</p>
+
+<p align="justify">2. Make sure the Node JS server and app server is active.</p>
+
+<p align="justify">3. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
+
+4. While testing the functionality of this map, use of `Inspect` or `Developer mode` of the browser to see if any error occurs.
+
 
 
 
