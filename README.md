@@ -70,7 +70,7 @@ node dataAPI.js
 
 <p align="justify">The files associated te this question setting app are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
 
-* `cege0043-apps-liuzongshi123`
+* **`cege0043-apps-liuzongshi123`**
 
 <p align="justify"><code>main.html</code>: The main html file of this app, through which user could use all the question setting functionality. It interconnects all of the resources within the <code>cege0043-apps-liuzongshi123</code> folder and makes use of them. This html contains several divs and menu buttons.</p>
 
@@ -209,8 +209,68 @@ node dataAPI.js
 	</tbody>
 	</table>
 
+<p align="justify"><code>Help_question.html</code>: The main html file contain the brief introduction to this app.</p>
 
+* **`cege0043-apps-liuzongshi123/js`**: Containing Javascript files required by `main.html`.
 
+* `leaflet.awesome-markers.js`:  Add colorful iconic markers for Leaflet.
+
+* `icon.js`:  Create several global varibles for different colored icon.
+
+* `basicMap.js`:  Create a global varible global variable to store the map. Contain two functions to load the leaflet map.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getLocation()</code></td>
+			<td align="center">Get curry Loction of user and pass it to function <code>loadLeafletMap()</code>.</td>
+			</tr>
+			<tr>
+			<td><code>loadLeafletMap()</code></td>
+			<td align="center">Load the leaflet map and zoom to current position of users.</td>
+			</tr>
+	</tbody>
+	</table>
+
+* `menu.js`:  Contain functions for <strong>Create Questions</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>clickEvent()</code></td>
+			<td align="center">Open the click event on leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>onMapClick()</code></td>
+			<td align="center">Add a marker on leaflet map for user's click and open the popup for user's click which conatin the location of click. The popup also conatin the button <code>Create Question Here</code>.</td>
+			</tr>
+			<tr>
+			<td><code>removeclickLayers()</code></td>
+			<td align="center">Remove the extra click marker on leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>StartCreation()</code></td>
+			<td align="center">Load question creation form after user click <code>Create Question Here</code> button and hide other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>modification()</code></td>
+			<td align="center">Load delete form after user click <code>Delete Creation</code> button and hide other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>StopCreation()</code></td>
+			<td align="center">Hide the question creation form or delete form after user click <code>Stop Creation</code> button.</td>
+			</tr>
+			<tr>
+	</tbody>
+	</table>
 
 
 
