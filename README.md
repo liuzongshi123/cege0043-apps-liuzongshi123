@@ -76,7 +76,7 @@ node dataAPI.js
 
 * div:
 <div align="justify">
-<table><thead><tr><th>ID</th><th>Description</th></tr></thead><tbody align="center"><tr><td>1</td><td>1</td></tr></tbody></table>
+<table style="margin:auto"><thead><tr><th>ID</th><th>Description</th></tr></thead><tbody align="center"><tr><td>1</td><td>1</td></tr></tbody></table>
 </div>
 
 
