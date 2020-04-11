@@ -76,8 +76,9 @@ The files associated te this question setting app are located in the `cege0043-a
 
 * div:
 
+
 |标题|标题|标题|
-|:---|:---:|---:|
+ :-: | :-: | :-:
 |居左测试文本|居中测试文本|居右测试文本|
 |居左测试文本1|居中测试文本2|居右测试文本3|
 |居左测试文本11|居中测试文本22|居右测试文本33|
