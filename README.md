@@ -428,6 +428,20 @@ node dataAPI.js
 	</tbody>
 	</table>
 
+## 5. Code reference
 
+* <p align="justify">A large proportion of codes are adapted from the lab notes of <strong>CEGE 0043 Web Mobile and GIS by Calire Ellul</strong>, including Basic structures of all <code>.html</code> files. Functions related to events detector, data downloading, data uploading, data processing, user location tracking, displaying map layers, and getting port numbers.</p>
 
+* <p align="justify">May layers of this app are based on <strong>Leaflet</strong>.</p>
 
+* <p align="justify">The base map data is based on <strong>Open Street Map<strong>.</p>
+
+* <p align="justify">The utility of changing div contents of one <code>.html</code> by contents of another <code>.html</code> provided by <strong>W3 schools</strong>.</p>
+
+* <p align="justify">Many basic functions related to how to structure different things on web page, such as how to adjust the location of the text, how to hide or display the <code>div</code>, or how to make the input box colored in red and show wrong message if user do not fill the input box. [provided by <strong>RUNOOB.COM</strong>].</p>
+
+* <p align="justify">How to add legends and create double column for D3 Graph from <strong>https://www.cnblogs.com/chenjy1225/p/10982481.html</strong> accessed 8th April 2020.</p>
+
+* <p align="justify">How to add axis labels and title for D3 Graph from <strong>https://www.cnblogs.com/MockingBirdHome/p/3368739.html</strong> accessed 8th April 2020.</p>
+
+* <p align="justify">Change the image of bootStrap icon based on <strong>https://fontawesome.com/</strong> accessed 5th April 2020..</p>
