@@ -19,21 +19,21 @@
 ## 2. Deployment
 * <p align="justify">Procedures to deploy this app:</p>
 
-1. Clone the source code of this question setting app from Github to CEGE server at `home/studentuser/code` by typing in the command line (terminal) window for Ubuntu:
+<p align="justify">1. Clone the source code of this question setting app from Github to CEGE server at <code>home/studentuser/code</code> by typing in the command line (terminal) window for Ubuntu:</p>
 
 ```javascript
 cd /home/studentuser/code
 git clone https://github.com/ucl-geospatial/cege0043-apps-liuzongshi123
 ```
 
-2. Clone the source code of the corresponding Node JS server from Github to CEGE server at `home/studentuser/code`.
+<p align="justify">2. Clone the source code of the corresponding Node JS server from Github to CEGE server at <code>home/studentuser/code</code>.</p>
 
 ```javascript
 cd /home/studentuser/code
 git clone https://github.com/ucl-geospatial/cege0043-data-api-liuzongshi123
 ```
 
-3. Go to the `cege0043-data-api-liuzongshi123` folder and start the Node JS server.
+<p align="justify">3. Go to the <code>cege0043-data-api-liuzongshi123</code> folder and start the Node JS server.</p>
 
 ```javascript
 cd /home/studentuser/code/cege0043-data-api-liuzongshi123
@@ -47,7 +47,7 @@ cd /home/studentuser/code/cege0043-apps-liuzongshi123
 pm2 start app.js
 ```
 
-5. Make sure the Node JS server is successfully started. If any error occurs, you could enter the debug mode through the command line window by typing:
+<p align="justify">5. Make sure the Node JS server is successfully started. If any error occurs, you could enter the debug mode through the command line window by typing:</p>
 
 ```javascript
 cd /home/studentuser/code/cege0043-data-api-liuzongshi123
@@ -57,18 +57,18 @@ node dataAPI.js
 ## 3. Testing
 * <p align="justify">Procedures to test this app:</p>
 
-1. Make sure your device is connected to UCL Wifi or UCL VPN.
+<p align="justify">1. Make sure your device is connected to UCL Wifi or UCL VPN.</p>
 
-2. Make sure the Node JS server and app server is active.
+<p align="justify">2. Make sure the Node JS server and app server is active.</p>
 
-3. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html
+<p align="justify">3. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
 
-4. While testing the functionality of this map, use of `Inspect` or `Developer mode` of the browser to see if any error occurs.
+<p align="justify">4. While testing the functionality of this map, use of <code>Inspect</code> or <code>Developer mode</code> of the browser to see if any error occurs.</p>
 
 
 ## 4. File description
 
-The files associated te this question setting app are located in the `cege0043-apps-liuzongshi123` folder and several subfolders.
+<p align="justify">The files associated te this question setting app are located in the <code>cege0043-apps-liuzongshi123</code> folder and several subfolders.</p>
 
 * `cege0043-apps-liuzongshi123`
 
