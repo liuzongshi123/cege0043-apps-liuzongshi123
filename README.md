@@ -79,12 +79,12 @@ node dataAPI.js
 <table align="center">
 	<thead align="center"><tr>
 		<th>ID</th>
-		<th>Description</th><
-		/tr></thead>
+		<th>Description</th>
+		</tr></thead>
 		<tbody align="center">
 			<tr>
 			<td><code>wrapper</code></td>
-			<td align="justify">Hold the <code>Sidebar</code>> and <code>Main Content</code>></td>
+			<td align="justify">Hold the <code>Sidebar</code> and <code>Main Content</code></td>
 			</tr>
 	</tbody>
 	</table>
