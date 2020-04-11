@@ -84,33 +84,108 @@ node dataAPI.js
 		<tbody align="center">
 			<tr>
 			<td><code>wrapper</code></td>
-			<td align="justify">Hold the <code>Sidebar</code> and <code>Main Content</code></td>
+			<td align="center">Hold the <code>Sidebar</code> and <code>Main Content</code>.</td>
 			</tr>
 			<tr>
 			<td><code>Sidebar</code></td>
-			<td align="justify">Hold all buttons</td>
+			<td align="center">Hold all buttons.</td>
 			</tr>
 			<tr>
 			<td><code>Main Content</code></td>
-			<td align="justify">Hold the <code>mapContainer</code>, <code>question_creation</code>, <code>modification</code> and <code>FiveDifficultPoint</code></td>
+			<td align="center">Hold the <code>mapContainer</code>, <code>question_creation</code>, <code>modification</code> and <code>FiveDifficultPoint</code>.</td>
 			</tr>
 			</tr>
 			<tr>
 			<td><code>mapContainer</code></td>
-			<td align="justify">Hold the leaflet map</td>
+			<td align="center">Hold the leaflet map.</td>
 			</tr>
 			<tr>
 			<td><code>question_creation</code></td>
-			<td align="justify">Hold the question creatrion form</td>
+			<td align="center">Hold the question creation form.</td>
 			</tr>
 			<tr>
 			<td><code>modification</code></td>
-			<td align="justify">Hold the form to delete question and answer in database</td>
+			<td align="center">Hold the form to delete question and answer in database.</td>
 			</tr>
 			</tr>
 			<tr>
-			<td><code>FiveDifficultPoint<</code></td>
-			<td align="justify">Hold the list to show five difficult quesitons in database</td>
+			<td><code>FiveDifficultPoint</code></td>
+			<td align="center">Hold the list to show five difficult quesitons in database.</td>
+			</tr>
+	</tbody>
+	</table>
+
+* Button:
+<table align="center">
+	<thead align="center"><tr>
+		<th>Name</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>Start Creation</code> in <code>Create Questions</code></td>
+			<td align="center">Start the clip event on leaflet map which declide the location of the question.<br>
+			Hold the button <code>Creation Question Here</code>.</td>
+			</tr>
+			<tr>
+			<td><code>Creation Question Here</code> in <code>Create Questions</code></td>
+			<td align="center">Load the question creation form</td>
+			</tr>
+			<tr>
+			<td><code>Delete Creation</code> in <code>Create Questions</code></td>
+			<td align="center">Load the delete form to delete question and answer in database.</td>
+			</tr>
+			<tr>
+			<td><code>Stop Creation</code></td>
+			<td align="center">Hide the question creation form or delete form.</td>
+			</tr>
+			<tr>
+			<td><code>Load Points</code> in <code>Existing Points</code></td>
+			<td align="center">Load all the existing quiz points created by the current user.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Existing Points</code> in <code>Existing Points</code></td>
+			<td align="center">Remove the existing quiz points created by the current user.</td>
+			</tr>
+			<tr>
+			<td><code>Load Points</code> in <code>Closest 5 Points</code></td>
+			<td align="center">Load the closest five points to your current location created by all users.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Points</code> in <code>Closest 5 Points</code></td>
+			<td align="center">Remove the closest five points to your current location created by all users.</td>
+			</tr>
+			<tr>
+			<td><code>Load Questions</code> in <code>Diffcult 5 Questions</code></td>
+			<td align="center">Load the most difficult five questions created by any user where most wrong answers were given.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Questions</code> in <code>Diffcult 5 Questions</code></td>
+			<td align="center">Remove the most difficult five questions created by any user where most wrong answers were given.</td>
+			</tr>
+			<tr>
+			<td><code>Load Questions</code> in <code>Added Questions</code></td>
+			<td align="center">Load the points added in the last week by any user.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Questions</code> in <code>Added Questions</code></td>
+			<td align="center">Remove the points added in the last week by any user.</td>
+			</tr>
+			<tr>
+			<td><code>All User Rates</code> in <code>Participation Rates</code></td>
+			<td align="center">Load a histogram of daily participation rates of  all users in the database during last week, including how many questions have been answered and how many answers were correct.</td>
+			</tr>
+			<tr>
+			<td><code>My Rates</code> in <code>Participation Rates</code></td>
+			<td align="center">Load a histogram of daily participation rates of the current user during last week, including how many questions have been answered and how many answers were correct.</td>
+			</tr>
+			<tr>
+			<td><code>Remove Graph</code> in <code>Participation Rates</code></td>
+			<td align="center">Remove the histogram and reload leaflet map.</td>
+			</tr>
+			<tr>
+			<td><code>Help</code></td>
+			<td align="center">Link to the <code>Help_question.html</code> which contain a breif introduction to this app.</td>
 			</tr>
 	</tbody>
 	</table>
