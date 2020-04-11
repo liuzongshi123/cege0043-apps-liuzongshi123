@@ -19,5 +19,9 @@
 ## 2. Deployment
 * <p align="justify">Procedures to deploy this app:</p>
 
-<p align="justify">1. Clone the source code of this question setting app from Github to CEGE server at</p> `home/studentuser/code` <p align="justify">by typing in the command line (terminal) window for Ubuntu:</p>
+<p align="justify">1. Clone the source code of this question setting app from Github to CEGE server at</p> `home/studentuser/code` by typing in the command line (terminal) window for Ubuntu:</p>
+```
+cd /home/studentuser/code
+git clone https://github.com/ucl-geospatial/cege0043-apps-liuzongshi123
+```
 
