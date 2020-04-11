@@ -229,6 +229,11 @@ node dataAPI.js
 
 <br>
 
+`sb-admin-2.js`:  Provide bootStrap template.
+
+<br>
+
+
 `icon.js`:  Create several global varibles for different colored icon.
 
 <br>
@@ -602,6 +607,10 @@ node dataAPI.js
 
 <br>
 
+`sb-admin-2.js`:  Provide bootStrap template.
+
+<br>
+
 `icon.js`:  Create several global varibles for different colored icon.
 
 <br>
@@ -745,7 +754,78 @@ node dataAPI.js
 
 <br>
 
+`topscorers.js`:  Contain function for <code>top scoresrs</code> function.
 
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>topscorers()</code></td>
+			<td align="center">Get the top scorers data from database and draw a histogram to show the data. Then hide the other useless things.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveTopscorers</code></td>
+			<td align="center">Remove the histogram and reload leaflet map.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`LastFiveQuestionAnswered.js`:  Contain function for <strong>Answered Questions</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getLastFiveQuestionsAnsewred()</code></td>
+			<td align="center">Ajax link to get last 5 questions that the user answered from database and pass them to <code>loadLastFiveQuestionsAnsewred()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>loadLastFiveQuestionsAnsewred()</code></td>
+			<td align="center">Load last 5 questions that the user answered and add them to leaflet map. The colour of markers are depending on whether they were right/wrong the first time they answered the question. Then hide other layers.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveLastFiveQuestionsAnsewred()</code></td>
+			<td align="center">Remove last 5 questions that the user answered and reload existing quiz question layer.</td>
+			</tr>
+	</tbody>
+	</table>
+
+<br>
+
+`AnsweredWrong.js`:  Contain function for <strong>Question Answered Wrong</strong> part.
+
+<table align="center">
+	<thead align="center"><tr>
+		<th>Function</th>
+		<th>Description</th>
+		</tr></thead>
+		<tbody align="center">
+			<tr>
+			<td><code>getAnsweredWrong()</code></td>
+			<td align="center">Ajax link to get questions that the user hasn't answered correctly from database and pass them to <code>loadAnsweredWrong()</code> function.</td>
+			</tr>
+			<tr>
+			<td><code>loadAnsweredWrong()</code></td>
+			<td align="center">Load questions and calculates proximity alerts for questions that the user hasn’t answered correctly and add them to leaflet map. Then hide other layers.</td>
+			</tr>
+			<tr>
+			<td><code>closestWrongPoint()</code></td>
+			<td align="center">Popup the question form for closest wrong point based on current user's location.</td>
+			</tr>
+			<tr>
+			<td><code>RemoveAnsweredWrong()</code></td>
+			<td align="center">Remove questions that the user hasn't answered correctly and reload existing quiz question layer.</td>
+			</tr>
+	</tbody>
+	</table>
 
 ## 5. Code reference
 
