@@ -1,5 +1,9 @@
-# cege0043-apps
-#您需要开发一个基于位置的应用程序，其中包含两个组件
--一个应用程序，根据其运行位置，它将显示：
-o在手机上运行的测验应用程序（使用Bootstrap）
-o在浏览器中使用的问题设置应用程序（使用Bootstrap）
+Question Setting App
+A technical guide for a browser-based question setting app. This app helps the user to create a new
+
+
+
+question about a location, add possible answers and upload questions to a database on the web
+server. By using this app, the location of a question could be input by either clicking on a point on a
+Leaflet map or manually typing latitudes and longitudes. This app is also able to retrieve existed
+questions of certain characteristics and information of users from the database.
