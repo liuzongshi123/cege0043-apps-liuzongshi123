@@ -57,11 +57,11 @@ node dataAPI.js
 ## 3. Testing
 * <p align="justify">Procedures to test this app:</p>
 
-<p align="justify">1. Make sure your device is connected to UCL Wifi or UCL VPN.</p>
+1. Make sure your device is connected to UCL Wifi or UCL VPN.
 
-<p align="justify">2. Make sure the Node JS server and app server is active.</p>
+2. Make sure the Node JS server and app server is active.
 
-<p align="justify">3. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html</p>
+3. In a browser that supports geolocation access via https connection, type the following address to use the question setting app: https://developer.cege.ucl.ac.uk:31083/main.html
 
 4. While testing the functionality of this map, use of `Inspect` or `Developer mode` of the browser to see if any error occurs.
 
