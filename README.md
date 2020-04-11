@@ -76,16 +76,7 @@ node dataAPI.js
 
 * div:
 
-<table align="center">
-	<thead align="center"><tr>
-		<th>ID</th>
-		<th>Description</th>
-	</tr></thead>
-	<tbody align="center"><tr>
-		<td>1</td>
-		<td>1</td>
-	</tr></tbody>
- </table>
+<table align="right"><thead><tr><th>ID</th><th>Description</th></tr></thead><tbody align="center"><tr><td>1</td><td>1</td></tr></tbody></table>
 
 
 
